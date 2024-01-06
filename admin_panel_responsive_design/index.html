@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+    <title>Document</title>
+</head>
+<body>
+    <div class="checker">
+        <!-- header -->
+        <header>
+            <div class="title-box">
+                <div class="menu-btn"><i id="menu-icon" class="fa-solid fa-bars"></i></div>
+                <div class="title">Complaint Management System</div>
+            </div>
+            <button class="logout-btn">Logout</button>
+            <button class="logout-btn" id="logout-btn"><i class="fa-solid fa-arrow-right-from-bracket"></i></button>
+        </header>
+            <div class="container screen-height">
+                <!-- menu -->
+                <div class="button-class">
+                    <button class="close-menu"><i class="fa-regular fa-circle-xmark"></i></button>
+                    <div class="profile">
+                        <div class="profile-img"><i class="fa-solid fa-user"></i></div>
+                        <div class="profile-name">John Smith</div>
+                    </div>
+                    <div class="menu-options">
+                        <div class="options">
+                            <i class="fa-solid fa-gauge-high"></i>
+                            <div class="option-name">Dashboard</div>
+                        </div>
+                        <div class="options">
+                            <i class="fa-solid fa-sliders"></i>
+                            <div class="option-name">Account Setting</div>
+                        </div>
+                        <div class="options">
+                            <i class="fa-solid fa-gears"></i>
+                            <div class="option-name">Lodge Complaint</div>
+                        </div>
+                        <div class="options">
+                            <i class="fa-solid fa-gears"></i>
+                            <div class="option-name">Complaint History</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="main">
+                    <div class="info-title flex">
+                        <i class="fa-solid fa-chevron-right"></i>
+                        <div>Profile Info</div>
+                    </div>
+                    <!-- form-section -->
+                    <div class="form-section">
+                        <div class="person flex mg-left">
+                            <i class="fa-solid fa-user"></i>
+                            <div class="name">John Smith's Profile</div>
+                        </div>
+                        <div class="date-time flex mg-left">
+                            <div>Last Updated at:</div>
+                            <div>2020-05-08 22:16:22</div>
+                        </div>
+                        <!-- form -->
+                        <form>
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="label-flex">
+                                            <label for="full-name">Full Name</label>
+                                            <input type="text"  id="full-name">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="label-flex">
+                                                <label for="email">User Email</label>
+                                                <input type="text"  id="email">
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="label-flex">
+                                                <label for="conatct">Conatct</label>
+                                                <input type="text" id="conatct">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="label-flex">
+                                                <label for="address">Address</label>
+                                                <textarea id="address"  rows="3"></textarea>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="label-flex">
+                                                <label for="state">State</label>
+                                                <select id="state">
+                                                    <option value="state" disabled> Choose your state</option>
+                                                    <option value="sindh" > Sindh</option>
+                                                    <option value="punjab" > Punjab</option>
+                                                    <option value="balochistan" > Sindh</option>
+                                                </select>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="label-flex">
+                                                <label for="country">Country</label>
+                                                <input type="text" id="country">
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="label-flex">
+                                                <label for="pin">Pin Code</label>
+                                                <input type="text" id="pin">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="label-flex">
+                                                <label for="reg">Reg Date</label>
+                                                <input type="datetime-local" id="reg" value="2020-05-08 22:10:50">
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2" id="btn-td">
+                                            <button class="submit-btn" type="submit">Submit</button>
+                                        </td>
+                                        
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        <!-- footer -->
+        <footer>
+            <div> &copy; 2020 CMS All rights reserved</div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
