@@ -511,12 +511,9 @@ footer {
   flex-direction: column;
   font-size: 11px;
   color: #737373;
-  max-width: 1024px;
+  max-width: 940px;
   margin-inline: auto;
 }
-/* footer .copyright_year {
-    font-size: 11px;
-  } */
 footer .lang {
   border-bottom: 1px solid #dddfe2;
   margin-bottom: 8px;
