@@ -102,3 +102,15 @@ footer div{
     color: #606770;
 }
 /* .1877F2 */
+@media (max-width: 375.98px){
+    .input{
+        gap: 5px;
+        width: 90%;
+    }
+    .input input{
+        width: 90%;
+    }
+    button{
+        width: 70%;
+    }
+}
