@@ -1,0 +1,72 @@
+
+:root{
+    --brown : #A17C69;
+    --green : #7E8E66;
+}
+*{
+    font-style: normal;
+    font-family: "Single Day", cursive;
+    font-weight: 900 !important; 
+}
+.brown{
+    background: var(--brown);
+}
+.txt-brown{
+    color: var(--brown);
+}
+.green{
+    background: var(--green);
+}
+.txt-green{
+    color: var(--green);
+}
+/* *{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+} */
+/* banner */
+
+
+.bg-img{
+    background: url("https://penkeonsol.xyz/wp-content/uploads/2024/02/Yellow-and-black-caution-tape-barricade-tape-seamless-striped-pattern-or-texture_.jpg");
+    object-fit: cover;
+    background-repeat: repeat-x;
+    position: relative;
+}
+/* .grd{
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    background-image: linear-gradient(180deg, #080808DE 0%, #332F00C7 100%);
+} */
+.bg-dark {
+      /* position: absolute; */
+    min-height: 240px;
+    width: 100%;
+    background: black;
+    opacity: 0.55;
+  }
+body{
+    overflow-x: hidden;
+}
+.accordion-item{
+    border: none !important;
+
+}
+.accordion-item button{
+    background: var(--brown);
+    font-size: 28px;
+    font-weight: 600 !important;
+}
+.accordion-body{
+    background: var(--green);
+    font-size: 28px;
+    font-weight: 600 !important;
+    padding-inline: 50px;
+}
