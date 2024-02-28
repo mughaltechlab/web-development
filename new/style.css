@@ -1,9 +1,30 @@
-
+.s{
+    color : #00ffa3;
+    color : #dc1fff;
+}
 :root{
+    --light-brown: #E3C8B3;
     --brown : #A17C69;
     --green : #7E8E66;
 }
+.token-address::-webkit-scrollbar{
+    width: 5px;
+    height: 5px;
+    background: var(--brown);
+}
+.token-address::-webkit-scrollbar-track{
+    margin: 10px;
+    border-radius: 50px;
+    /* background:rgba(0, 0, 0, .4); */
+}
+.token-address::-webkit-scrollbar-thumb{
+    background: var(--light-brown);
+    width: 5px;
+    border-radius: 50px;
+}
 *{
+    margin: 0;
+    padding: 0;
     font-style: normal;
     font-family: "Single Day", cursive;
     font-weight: 900 !important; 
@@ -26,14 +47,83 @@
     box-sizing: border-box;
 } */
 /* banner */
+/* myloop container */
+.myloop-container {
+    border-top: 5px solid ;
+    border-bottom: 5px solid;
+    height: 50px; /* Fixed height */
+    width: 100%; /* Full width */
+    overflow: hidden; /* Hide overflowing content */
+    position: relative;
+    background-color: #E3C8B3; /* Background color for container */
+  }
+  .text {
+    position: absolute;
+    top: 50%;
+    transform: translate(0,-50%);
+    word-spacing: 10px;
+    color: #A17C69;
+    font-size: 30px;
+    white-space: nowrap; /* Prevent text from wrapping */
+    animation: moveText 20s linear infinite; /* Animation to move text */
+  }
+  @keyframes moveText {
+    0% { left: 1%; }   
+    100% { left: -100%; }   
+  }
+  /* @keyframes moveText {
+    0% { left: 0; } 
+    100% { left: calc(100% - 100px); } 
+  } */
 
-
-.bg-img{
+/* .bg-img{
     background: url("https://penkeonsol.xyz/wp-content/uploads/2024/02/Yellow-and-black-caution-tape-barricade-tape-seamless-striped-pattern-or-texture_.jpg");
     object-fit: cover;
     background-repeat: repeat-x;
     position: relative;
-}
+} */
+/* overlay image style */
+.mycontainer {
+    position: relative;
+    width: 100%;
+    min-height: 50vh;
+    overflow: hidden; /* Hide overflowing content */
+  }
+  .background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://penkeonsol.xyz/wp-content/uploads/2024/02/Yellow-and-black-caution-tape-barricade-tape-seamless-striped-pattern-or-texture_.jpg'); /* Change to your background image */
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+  }
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Black color with 50% opacity */
+    z-index: 2;
+  }
+  .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    z-index: 3;
+    text-align: center;
+    background: rgba(161, 124, 105, .6);
+    color: white;
+  }
+  .content p {
+    font-size: max(15px,2.302vw);
+    line-height: 1.5;
+  }
 /* .grd{
     position: absolute;
     z-index: 1;
@@ -45,6 +135,10 @@
     background-color: transparent;
     background-image: linear-gradient(180deg, #080808DE 0%, #332F00C7 100%);
 } */
+.row{
+    margin: 0 !important;
+    margin: 0 !important;
+}
 .bg-dark {
       /* position: absolute; */
     min-height: 240px;
@@ -55,18 +149,37 @@
 body{
     overflow-x: hidden;
 }
-.accordion-item{
-    border: none !important;
 
+.lightbrown-shadow{
+    color : var(--light-brown);
+    text-shadow: -1px 0px 4px rgba(0,0,0,1);
+}
+
+.accordion{
+    border: none;
+    border-radius: 0 !important;
+}
+.accordion-item, .accordion-header{
+    border: none !important;
+    background: transparent !important;
+    border-radius: 20px !important;
+    margin-bottom: 20px !important;
+}
+.accordion-item{
+    box-shadow: 0 2px 20px 0 rgba(0, 0, 0, .4) ;
 }
 .accordion-item button{
     background: var(--brown);
-    font-size: 28px;
+    font-size: max(2.083vw, 20px);
+     /* 28px; */
     font-weight: 600 !important;
 }
 .accordion-body{
     background: var(--green);
-    font-size: 28px;
+    font-size: max(1.458vw , 20px);
     font-weight: 600 !important;
-    padding-inline: 50px;
+    /* padding-inline: 50px; */
+}
+button{
+    box-shadow: 0 2px 20px 0 rgba(0, 0, 0, .4) ;
 }
