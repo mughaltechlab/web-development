@@ -1,8 +1,9 @@
 :root{
     --light-brown: #E3C8B3;
     /* --brown : #B0845D; */
-    --brown : #B3865F;
+    /* --brown : #B3865F; */
     
+    --brown : #B6875D;
     --green : #66925D;
 }
 .token-address::-webkit-scrollbar{
@@ -178,6 +179,6 @@ body{
     font-weight: 600 !important;
     /* padding-inline: 50px; */
 }
-button{
+button, a{
     box-shadow: 0 2px 20px 0 rgba(0, 0, 0, .4) ;
 }
