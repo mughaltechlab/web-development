@@ -4,8 +4,10 @@
 }
 :root{
     --light-brown: #E3C8B3;
-    --brown : #A17C69;
-    --green : #7E8E66;
+    /* --brown : #B0845D; */
+    --brown : #B3865F;
+    
+    --green : #66925D;
 }
 .token-address::-webkit-scrollbar{
     width: 5px;
