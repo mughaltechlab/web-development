@@ -153,8 +153,40 @@ body{
     color : var(--light-brown);
     text-shadow: -1px 0px 4px rgba(0,0,0,1);
 }
-
-.accordion{
+/* !workinggggg */
+.accordion .card {
+    /* border-radius: 20px; */
+    background: transparent;
+    overflow: hidden;
+    border: none;
+  }
+.accordion .card-header{
+    background-color: var(--brown);
+    border-radius: 30px;
+}
+.accordion .card-header button {
+    text-decoration: none;
+    border: none;
+    box-shadow: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    text-align: start;
+    font-size: max(2.083vw, 20px);
+    font-weight: 600 !important;
+    color: black;
+}
+.accordion .card-body{
+    font-size: max(1.458vw , 20px);
+    font-weight: 600 !important;
+    padding: 30px 50px;
+}
+.accordion .card-header .btn i {
+    margin-left: auto;
+  }
+/* !workinggggg */
+/* .accordion{
     border: none;
     border-radius: 0 !important;
 }
@@ -170,15 +202,13 @@ body{
 .accordion-item button{
     background: var(--brown);
     font-size: max(2.083vw, 20px);
-     /* 28px; */
     font-weight: 600 !important;
 }
 .accordion-body{
     background: var(--green);
     font-size: max(1.458vw , 20px);
     font-weight: 600 !important;
-    /* padding-inline: 50px; */
-}
+} */
 button, a{
     box-shadow: 0 2px 20px 0 rgba(0, 0, 0, .4) ;
 }
