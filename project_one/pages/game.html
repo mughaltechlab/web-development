@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Game</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .table-responsive {
+            font-size: 14px;
+            max-height: 300px;
+            overflow-y: auto;
+        }
+
+        th,
+        td {
+            white-space: nowrap;
+        }
+
+        /* gamebtn */
+        .gamebtn-card {
+            color: white;
+        }
+
+        .main {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5em;
+        }
+
+        .up {
+            display: flex;
+            flex-direction: row;
+            gap: 0.5em;
+        }
+
+        .down {
+            display: flex;
+            flex-direction: row;
+            gap: 0.5em;
+        }
+
+        .card1 {
+            width: 40px;
+            height: 40px;
+            outline: none;
+            border: none;
+            /* background: black; */
+            border-radius: 90px 5px 5px 5px;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+            transition: .2s ease-in-out;
+        }
+
+        .instagram {
+            margin-top: 1.5em;
+            margin-left: 1.2em;
+            fill: #cc39a4;
+        }
+
+        .card2 {
+            width: 40px;
+            height: 40px;
+            outline: none;
+            border: none;
+            /* background: black; */
+            border-radius: 5px 90px 5px 5px;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+            transition: .2s ease-in-out;
+        }
+
+        .twitter {
+            margin-top: 1.5em;
+            margin-left: -.9em;
+            fill: #03A9F4;
+        }
+
+        .card3 {
+            width: 40px;
+            height: 40px;
+            outline: none;
+            border: none;
+            /* background: black; */
+            border-radius: 5px 5px 5px 90px;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+            transition: .2s ease-in-out;
+        }
+
+        .github {
+            margin-top: -.6em;
+            margin-left: 1.2em;
+        }
+
+        .card4 {
+            width: 40px;
+            height: 40px;
+            outline: none;
+            border: none;
+            /* background: black; */
+            border-radius: 5px 5px 90px 5px;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+            transition: .2s ease-in-out;
+        }
+
+        .discord {
+            margin-top: -.9em;
+            margin-left: -1.2em;
+            fill: #8c9eff;
+        }
+
+        .card1:hover {
+            cursor: pointer;
+            scale: 1.1;
+            background-color: #cc39a4;
+        }
+
+        .card1:hover .instagram {
+            fill: white;
+        }
+
+        .card2:hover {
+            cursor: pointer;
+            scale: 1.1;
+            background-color: #03A9F4;
+        }
+
+        .card2:hover .twitter {
+            fill: white;
+        }
+
+        .card3:hover {
+            cursor: pointer;
+            scale: 1.1;
+            background-color: black;
+        }
+
+        .card3:hover .github {
+            fill: white;
+        }
+
+        .card4:hover {
+            cursor: pointer;
+            scale: 1.1;
+            background-color: #8c9eff;
+        }
+
+        .card4:hover .discord {
+            fill: white;
+        }
+    </style>
+</head>
+
+<body class="">
+
+    <div class="container-fluid">
+        <div class="row flex-nowrap">
+            <!--todo: sidebar -->
+            <div id="sidebar" class="collapse sidebar col-auto col-md-3 col-xl-2 px-sm-2 px-0 blackd">
+                <div class="d-flex flex-column align-items-start align-items-sm-start px-3 pt-2 text-white ">
+                    <!-- logo -->
+                    <a href="/"
+                        class="d-flex  align-items-center  pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                        <span class="fs-5  text-white"><a class="sidebar-brand d-md-flex d-none m-3 mt-0" href="#"> <img
+                                    src="../assets/images/logo.png" class="" alt=""> </a></span>
+                    </a>
+                    <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-start align-items-sm-start"
+                        id="menu">
+                        <li class="nav-item">
+                            <a href="../index.html" class="nav-link align-middle px-0">
+                                <i class="bi bi-airplane"></i> <span class="ms-1 ">Crash pulse</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./game.html" class="sidebar-link nav-link px-0 align-middle"
+                                >
+                                <i class="bi bi-controller"></i> <span class="ms-1 ">Game</span> </a>
+                        </li>
+                        <li>
+                            <a href="./deposit_funds.html" class="sidebar-link nav-link px-0 align-middle"
+                                >
+                                <i class="bi bi-wallet-fill"></i> <span class="ms-1 ">Desposit funds</span></a>
+                        </li>
+                        <li>
+                            <a href="./withdraw_funds.html" class="sidebar-link nav-link px-0 align-middle"
+                                >
+                                <i class="bi bi-cash-stack"></i> <span class="ms-1 ">Withdraw funds</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="./personal_details.html" class="sidebar-link nav-link align-middle px-0"
+                                >
+                                <i class="bi bi-person-lines-fill"></i> <span class="ms-1 ">Personal details</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./transaction_history.html" class="sidebar-link nav-link px-0 align-middle"
+                                >
+                                <i class="bi bi-files"></i> <span class="ms-1 ">Transaction history</span> </a>
+                        </li>
+                        <li>
+                            <a href="./manage_levels.html" class="sidebar-link nav-link px-0 align-middle"
+                                >
+                                <i class="bi bi-bar-chart"></i> <span class="ms-1 ">Manage level</span> </a>
+                        </li>
+                        <li>
+                            <a href="./refferal.html" class="sidebar-link nav-link px-0 align-middle"
+                                >
+                                <i class="bi bi-link-45deg"></i> <span class="ms-1 ">Refferal</span> </a>
+                        </li>
+                        <li>
+                            <a href="#" class="nav-link px-0 align-middle">
+                                <button class="btn yellow fw-bold text-white " type="submit"> <i
+                                        class="bi bi-box-arrow-in-left"></i> <span class="">Sign out</span></button>
+                        </li>
+
+                    </ul>
+                    <hr>
+                    <div class="dropdown ">
+
+                        <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
+                            <li><a class="dropdown-item" href="#">New project...</a></li>
+                            <li><a class="dropdown-item" href="#">Settings</a></li>
+                            <li><a class="dropdown-item" href="#">Profile</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Sign out</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- todo main -->
+            <div class="col p-0 black min-vh-100 position-relative">
+                <!-- *nav -->
+                <nav class="navbar navbar-expand-lg blackd py-2 ">
+                    <div class="container-fluid">
+                        <!-- *LOGO -->
+                        <a class="navbar-brand  d-sm-none" href="#"> <img src="../assets/images/logo.png" class=""
+                                alt=""> </a>
+                        <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="bi bi-list text-white"></i>
+                  </button> -->
+
+                        <!-- !del class(collapse navbar-collapse) -->
+                        <div class="ms-auto" id="navbarSupportedContent">
+
+                            <div class="ms-0">
+                                <button class="btn yellow fw-bold text-white py-0 py-sm-1" type="submit"> <a href=""><i
+                                            class="bi bi-box-arrow-in-left"></i> <span
+                                            class="d-none d-sm-inline">Login</span></a></button>
+                                <button class="btn yellow fw-bold text-white py-0 py-sm-1" type="submit"> <a href=""><i
+                                            class="bi bi-box-arrow-in-left"></i> <span
+                                            class="d-none d-sm-inline">Signup</span></a></button>
+                                <!-- icons login signup-->
+                                <!-- <button class="btn yellow fw-bold text-white d-sm-none" type="submit">
+                            <i class="bi bi-list fw-bold"></i>
+                        </button>
+                        <button class="btn yellow fw-bold text-white d-sm-none" type="submit">
+                            <i class="bi bi-list fw-bold"></i>
+                        </button> -->
+                                <!-- icons end -->
+
+                                <!-- <button class="btn yellow fw-bold text-white " type="submit">Sign up</button> -->
+                            </div>
+                        </div>
+                        <!-- siebar menu icon -->
+                        <button id="sidebar-btn" class="navbar-toggler p-0  ms-2" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#sidebar" aria-controls="sidebar"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <i class="bi bi-list text-warning fw-bold"></i>
+                        </button>
+                    </div>
+                </nav>
+                <!-- *main -->
+                <div class="container-fluid pb-5">
+                    <!-- heading -->
+                    <div class=" row p-0 pt-5">
+                        <div class="col-12 text-center text-white">
+                            <h1>Our Game</h1>
+                        </div>
+                    </div>
+                    <!-- ! card row ----->
+                    <div class=" row p-0 pt-5">
+                        <!-- card col 1 -->
+                        <div class="col-lg-4 col-md-4 col-sm-12">
+                            <div class="container p-0">
+                                <h5 class="text-white" scope="col" colspan="2">Total bets</h5>
+                                <div class="table-responsive">
+                                    <table class="table table-dark table-striped ">
+                                        <thead>
+                                            <tr>
+                                                <th>User</th>
+                                                <th>Bet</th>
+                                                <th>Mult.</th>
+                                                <th>Cash out</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="">John Doe</td>
+                                                <td>10791</td>
+                                                <td class="">-</td>
+                                                <td class="">-</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="">John Doe</td>
+                                                <td>10791</td>
+                                                <td class="">-</td>
+                                                <td class="">-</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="">John Doe</td>
+                                                <td>10791</td>
+                                                <td class="">-</td>
+                                                <td class="">-</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="">John Doe</td>
+                                                <td>10791</td>
+                                                <td class="">-</td>
+                                                <td class="">-</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="">John Doe</td>
+                                                <td>10791</td>
+                                                <td class="">-</td>
+                                                <td class="">-</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="">John Doe</td>
+                                                <td>10791</td>
+                                                <td class="">-</td>
+                                                <td class="">-</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="">John Doe</td>
+                                                <td>10791</td>
+                                                <td class="">-</td>
+                                                <td class="">-</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="">John Doe</td>
+                                                <td>10791</td>
+                                                <td class="">-</td>
+                                                <td class="">-</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="">John Doe</td>
+                                                <td>10791</td>
+                                                <td class="">-</td>
+                                                <td class="">-</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="">John Doe</td>
+                                                <td>10791</td>
+                                                <td class="">-</td>
+                                                <td class="">-</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="">John Doe</td>
+                                                <td>10791</td>
+                                                <td class="">-</td>
+                                                <td class="">-</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="">John Doe</td>
+                                                <td>10791</td>
+                                                <td class="">-</td>
+                                                <td class="">-</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="">John Doe</td>
+                                                <td>10791</td>
+                                                <td class="">-</td>
+                                                <td class="">-</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="">John Doe</td>
+                                                <td>10791</td>
+                                                <td class="">-</td>
+                                                <td class="">-</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="">John Doe</td>
+                                                <td>10791</td>
+                                                <td class="">-</td>
+                                                <td class="">-</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="">John Doe</td>
+                                                <td>10791</td>
+                                                <td class="">-</td>
+                                                <td class="">-</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="">John Doe</td>
+                                                <td>10791</td>
+                                                <td class="">-</td>
+                                                <td class="">-</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="">John Doe</td>
+                                                <td>10791</td>
+                                                <td class="">-</td>
+                                                <td class="">-</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="">John Doe</td>
+                                                <td>10791</td>
+                                                <td class="">-</td>
+                                                <td class="">-</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="">John Doe</td>
+                                                <td>10791</td>
+                                                <td class="">-</td>
+                                                <td class="">-</td>
+                                            </tr>
+
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-8 col-md-8 col-sm-12">
+                            <div class="container p-0">
+                                <!-- <h5 class="text-white" scope="col" colspan="2"></h5> -->
+                                <div class="row p-0">
+                                    <div class="col-lg-12">
+                                        <div class="container p-0">
+                                            <div class="card black rounded border-0 overflow-hidden"></div>
+                                            <img src="../assets/images/game.png" class="img-fluid"
+                                                alt="Responsive Image">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- button row -->
+                            <div class="row p-0">
+                                <!--todo first col -->
+                                <div class="col-lg-6 col-md-12 col-sm-12">
+                                    <div class="container card blackd mt-2 rounded d-flex justify-content-center align-items-center p-3">
+                                        <!-- First Row -->
+                                        <div class="row mt- text-center">
+                                            <div class="col">
+                                                <button style="font-size: 10px;"
+                                                    class="btn  yellow fw-bold text-white py-0 py-sm-1" type="button">
+                                                    <a href="" class="text-decoration-none text-dark">BET</a></button>
+                                                <button style="font-size: 10px;"
+                                                    class="btn  yellow fw-bold text-white py-0 py-sm-1" type="button">
+                                                    <a href="" class="text-decoration-none text-dark">Auto</a></button>
+                                            </div>
+                                        </div>
+
+                                        <!-- Second Row -->
+                                        <div class="row mt-3">
+                                            <div class="col-6 gamebtn d-flex justify-content-center align-items-center">
+                                                <div class="main">
+                                                    <div class="up">
+                                                        <button class="gamebtn-card card1 blackl">
+                                                            <span class="instagram">1</span>
+                                                        </button>
+                                                        <button class="gamebtn-card card2 blackl">
+                                                            <span class="twitter">2</span>
+
+                                                        </button>
+                                                    </div>
+                                                    <div class="down">
+                                                        <button class="gamebtn-card card3 blackl">
+                                                            <span class="github">3</span>
+                                                        </button>
+                                                        <button class="gamebtn-card card4 blackl">
+                                                            <span class="discord">4</span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-6 text-start">
+                                                <div class="container mb-2 p-0 w-100">
+                                                    <div class="row">
+                                                      <div class="col">
+                                                        <div class="btn-group w-100" role="group" aria-label="Plus Minus Buttons">
+                                                          <button type="button" class="btn yellow btn yellow fw-bold  py-0 py-sm-1"><i class="bi bi-plus"></i></button>
+                                                          <button type="button" class="btn yellow btn yellow fw-bold  py-0 py-sm-1"><i class="bi bi-dash"></i></button>
+                                                        </div>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                <button class="btn yellow fw-bold text-white py-0 py-sm-1 w-100" type="submit"> <a href="" class="text-decoration-none text-dark">BET</a></button>
+                                                  
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                                <!--todo second col -->
+                                <div class="col-lg-6 col-md-12 col-sm-12">
+                                    <div class="container card blackd mt-2 rounded d-flex justify-content-center align-items-center p-3">
+                                        <!-- First Row -->
+                                        <div class="row mt- text-center">
+                                            <div class="col">
+                                                <button style="font-size: 10px;"
+                                                    class="btn yellow fw-bold text-white py-0 py-sm-1" type="button"> <a
+                                                        href="" class="text-decoration-none text-dark">BET</a></button>
+                                                <button style="font-size: 10px;"
+                                                    class="btn yellow fw-bold text-white py-0 py-sm-1" type="button"> <a
+                                                        href="" class="text-decoration-none text-dark">Auto</a></button>
+                                            </div>
+                                        </div>
+
+                                        <!-- Second Row -->
+                                        <div class="row mt-3">
+                                            <div class="col-6 gamebtn d-flex justify-content-center align-items-center">
+                                                <div class="main">
+                                                    <div class="up">
+                                                        <button class="gamebtn-card card1 blackl">
+                                                            <span class="instagram">1</span>
+                                                        </button>
+                                                        <button class="gamebtn-card card2 blackl">
+                                                            <span class="twitter">2</span>
+
+                                                        </button>
+                                                    </div>
+                                                    <div class="down">
+                                                        <button class="gamebtn-card card3 blackl">
+                                                            <span class="github">3</span>
+                                                        </button>
+                                                        <button class="gamebtn-card card4 blackl">
+                                                            <span class="discord">4</span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-6 text-start">
+                                                <div class="container mb-2 p-0 w-100">
+                                                    <div class="row">
+                                                      <div class="col">
+                                                        <div class="btn-group w-100" role="group" aria-label="Plus Minus Buttons">
+                                                          <button type="button" class="btn yellow btn yellow fw-bold py-0 py-sm-1"><i class="bi bi-plus"></i></button>
+                                                          <button type="button" class="btn yellow btn yellow fw-bold py-0 py-sm-1"><i class="bi bi-dash"></i></button>
+                                                        </div>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                <button class="btn yellow fw-bold text-white py-0 py-sm-1 w-100" type="submit"> <a href="" class="text-decoration-none text-dark">BET</a></button>
+                                            </div>
+
+                                        </div>
+
+
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+
+    <script>
+        // Function to add a class based on screen size
+        function addClassBasedOnScreenSize() {
+            var sidebar = document.getElementById("sidebar");
+            if (window.innerWidth > 426) { // Adjust the screen size threshold as needed
+                sidebar.classList.add("show");
+            } else {
+                sidebar.classList.remove("show");
+            }
+        }
+
+        // Initial call to the function
+        addClassBasedOnScreenSize();
+
+        // Event listener to call the function on window resize
+        window.addEventListener("resize", addClassBasedOnScreenSize);
+    </script>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+</html>
