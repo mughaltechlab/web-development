@@ -9,207 +9,182 @@
 </head>
 <body class="">
 
-    <div class="container-fluid">
-        <div class="row flex-nowrap">
-            <!--todo: sidebar -->
-            <div id="sidebar" class="collapse sidebar col-auto col-md-3 col-xl-2 px-sm-2 px-0 blackd">
-                <div class="d-flex flex-column align-items-start align-items-sm-start px-3 pt-2 text-white ">
-                    <!-- logo -->
-                    <a href="/" class="d-flex  align-items-center  pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
-                        <span class="fs-5  text-white"><a class="sidebar-brand d-md-flex d-none m-3 mt-0" href="#"> <img src="./assets/images/logo.png" class="" alt=""> </a></span>
-                    </a>
-                    <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-start align-items-sm-start" id="menu">
-                        <li class="nav-item">
-                            <a href="#" class="nav-link align-middle px-0">
-                                <i class="bi bi-airplane"></i> <span class="ms-1 ">Crash pulse</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="nav-link px-0 align-middle">
-                                <i class="bi bi-wallet-fill"></i> <span class="ms-1 ">Desposit funds</span></a>
-                        </li>
-                        <li>
-                            <a href="#submenu2" data-bs-toggle="collapse" class="nav-link px-0 align-middle ">
-                                <i class="bi bi-cash-stack"></i> <span class="ms-1 ">Withdraw funds </span></a>
-                            <ul class="collapse nav flex-column ms-1" id="submenu2" data-bs-parent="#menu">
-                                <li class="w-100">
-                                    <a href="#" class="nav-link px-0"> <span class="">Item</span> 1</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="nav-link px-0"> <span class="">Item</span> 2</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <!-- <li>
-                            <a href="#submenu3" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
-                                <i class="fs-4 bi-grid"></i> <span class="ms-1 "></span> </a>
-                                <ul class="collapse nav flex-column ms-1" id="submenu3" data-bs-parent="#menu">
-                                <li class="w-100">
-                                    <a href="#" class="nav-link px-0"> <span class="">Product</span> 1</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="nav-link px-0"> <span class="">Product</span> 2</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="nav-link px-0"> <span class="">Product</span> 3</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="nav-link px-0"> <span class="">Product</span> 4</a>
-                                </li>
-                            </ul>
-                        </li> -->
-                        <li class="nav-item">
-                            <a href="#" class="nav-link align-middle px-0">
-                                <i class="bi bi-person-lines-fill"></i> <span class="ms-1 ">Personal details</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="nav-link px-0 align-middle">
-                                <i class="bi bi-files"></i> <span class="ms-1 ">Transaction history</span> </a>
-                        </li>
-                        <li>
-                            <a href="#" class="nav-link px-0 align-middle">
-                                <i class="bi bi-bar-chart"></i> <span class="ms-1 ">Manage level</span> </a>
-                        </li>
-                        <li>
-                            <a href="#" class="nav-link px-0 align-middle">
-                                <i class="bi bi-link-45deg"></i> <span class="ms-1 ">Refferal</span> </a>
-                        </li>
-                        <li>
-                            <a href="#" class="nav-link px-0 align-middle">
-                                <button class="btn yellow fw-bold text-white " type="submit"> <i class="bi bi-box-arrow-in-left"></i> <span class="">Sign out</span></button>
-                        </li>
+  <div class="container-fluid">
+    <div class="row flex-nowrap">
+        <!--todo: sidebar -->
+        <div id="sidebar" class="collapse sidebar col-auto col-md-3 col-xl-2 px-sm-2 px-0 blackd">
+            <div class="d-flex flex-column align-items-start align-items-sm-start px-3 pt-2 text-white ">
+                <!-- logo -->
+                <a href="/" class="d-flex  align-items-center  pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                    <span class="fs-5  text-white"><a class="sidebar-brand d-md-flex d-none m-3 mt-0" href="#"> <img src="../assets/images/logo.png" class="" alt=""> </a></span>
+                </a>
+                <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-start align-items-sm-start" id="menu">
+                    <li class="nav-item">
+                        <a href="./index.html" class="nav-link align-middle px-0" >
+                            <i class="bi bi-airplane"></i> <span class="ms-1 ">Crash pulse</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="sidebar-link nav-link px-0 align-middle" data-page="./pages/deposit_funds.html">
+                            <i class="bi bi-wallet-fill"></i> <span class="ms-1 ">Desposit funds</span></a>
+                    </li>
+                    <li>
+                        <a href="#" class="sidebar-link nav-link px-0 align-middle" data-page="./pages/withdraw_funds.html">
+                            <i class="bi bi-cash-stack"></i> <span class="ms-1 ">Withdraw funds</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="sidebar-link nav-link align-middle px-0" data-page="./pages/personal_details.html">
+                            <i class="bi bi-person-lines-fill"></i> <span class="ms-1 ">Personal details</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="sidebar-link nav-link px-0 align-middle" data-page="./pages/transaction_history.html">
+                            <i class="bi bi-files"></i> <span class="ms-1 ">Transaction history</span> </a>
+                    </li>
+                    <li>
+                        <a href="#" class="sidebar-link nav-link px-0 align-middle" data-page="./pages/manage_levels.html">
+                            <i class="bi bi-bar-chart"></i> <span class="ms-1 ">Manage level</span> </a>
+                    </li>
+                    <li>
+                        <a href="#" class="sidebar-link nav-link px-0 align-middle" data-page="./pages/refferal.html">
+                            <i class="bi bi-link-45deg"></i> <span class="ms-1 ">Refferal</span> </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link px-0 align-middle">
+                            <button class="btn yellow fw-bold text-white " type="submit"> <i class="bi bi-box-arrow-in-left"></i> <span class="">Sign out</span></button>
+                    </li>
 
+                </ul>
+                <hr>
+                <div class="dropdown ">
+                    
+                    <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
+                        <li><a class="dropdown-item" href="#">New project...</a></li>
+                        <li><a class="dropdown-item" href="#">Settings</a></li>
+                        <li><a class="dropdown-item" href="#">Profile</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">Sign out</a></li>
                     </ul>
-                    <hr>
-                    <div class="dropdown ">
-                        
-                        <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
-                            <li><a class="dropdown-item" href="#">New project...</a></li>
-                            <li><a class="dropdown-item" href="#">Settings</a></li>
-                            <li><a class="dropdown-item" href="#">Profile</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Sign out</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <!-- todo main -->
-            <div class="col p-0 black min-vh-100 position-relative">
-                <!-- *nav -->
-                <nav class="navbar navbar-expand-lg blackd py-2 ">
-                    <div class="container-fluid">
-                        <!-- *LOGO -->
-                      <a class="navbar-brand  d-sm-none" href="#"> <img src="./assets/images/logo.png" class="" alt=""> </a>
-                      <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <i class="bi bi-list text-white"></i>
-                      </button> -->
-                     
-                      <!-- !del class(collapse navbar-collapse) -->
-                      <div class="ms-auto" id="navbarSupportedContent">
-                        
-                        <div class="ms-0">
-                            <button class="btn yellow fw-bold text-white py-0 py-sm-1" type="submit"> <a href=""><i class="bi bi-box-arrow-in-left"></i> <span class="d-none d-sm-inline">Login</span></a></button>
-                            <button class="btn yellow fw-bold text-white py-0 py-sm-1" type="submit"> <a href=""><i class="bi bi-box-arrow-in-left"></i> <span class="d-none d-sm-inline">Signup</span></a></button>
-                            <!-- icons login signup-->
-                            <!-- <button class="btn yellow fw-bold text-white d-sm-none" type="submit">
-                                <i class="bi bi-list fw-bold"></i>
-                            </button>
-                            <button class="btn yellow fw-bold text-white d-sm-none" type="submit">
-                                <i class="bi bi-list fw-bold"></i>
-                            </button> -->
-                            <!-- icons end -->
-                            
-                            <!-- <button class="btn yellow fw-bold text-white " type="submit">Sign up</button> -->
-                        </div>
-                      </div>
-                      <!-- siebar menu icon -->
-                      <button id="sidebar-btn" class="navbar-toggler p-0  ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar" aria-controls="sidebar" aria-expanded="false" aria-label="Toggle navigation">
-                        <i class="bi bi-list text-warning fw-bold"></i>
-                      </button>
-                    </div>
-                </nav>
-                <!-- *main --> 
-                <div class="container-fluid pb-5">
-                    <!-- heading -->
-                    <div class=" row p-0 pt-5">
-                        <div class="col-12 text-center text-white">
-                            <h1>Manage Levels</h1>
-                        </div>
-                    </div>
-                    <!-- ! card row ----->
-                    <div class=" row p-0 pt-5">
-                        <!-- card col 1 -->
-                        <div class="col-lg-4 col-md-4 col-sm-12">
-                            <div class="container p-0">
-                                <h5 class="text-white" scope="col" colspan="2">Level 1 list</h5>
-                                <table class="table table-dark table-striped ">
-                                    <thead>
-                                        <tr>
-                                          <th>userid</th>
-                                          <th>Name</th>
-                                        </tr>
-                                      </thead>
-                                      <tbody>
-                                        <tr>
-                                          <th scope="row">--</th>
-                                          <td class=""> <span>--</span></td>
-                                        </tr>
-                                        
-                                      </tbody>
-                                </table>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-4 col-sm-12">
-                            <div class="container p-0">
-                                <h5 class="text-white" scope="col" colspan="2">Level 2 list</h5>
-                                <table class="table table-dark table-striped ">
-                                    <thead>
-                                        <tr>
-                                          <th>userid</th>
-                                          <th>Name</th>
-                                        </tr>
-                                      </thead>
-                                      <tbody>
-                                        <tr>
-                                          <th scope="row">--</th>
-                                          <td class=""> <span>--</span></td>
-                                        </tr>
-                                        
-                                      </tbody>
-                                </table>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-4 col-sm-12">
-                            <div class="container p-0">
-                                <h5 class="text-white" scope="col" colspan="2">Level 3 list</h5>
-                                <table class="table table-dark table-striped ">
-                                    <thead>
-                                        <tr>
-                                          <th>userid</th>
-                                          <th>Name</th>
-                                        </tr>
-                                      </thead>
-                                      <tbody>
-                                        <tr>
-                                          <th scope="row">--</th>
-                                          <td class=""> <span>--</span></td>
-                                        </tr>
-                                        
-                                      </tbody>
-                                </table>
-                            </div>
-                        </div>
-                        
-                    </div>
-
                 </div>
             </div>
         </div>
+        <!-- todo main -->
+        <div class="col p-0 black min-vh-100 position-relative">
+            <!-- *nav -->
+            <nav class="navbar navbar-expand-lg blackd py-2 ">
+                <div class="container-fluid">
+                    <!-- *LOGO -->
+                  <a class="navbar-brand  d-sm-none" href="#"> <img src="../assets/images/logo.png" class="" alt=""> </a>
+                  <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="bi bi-list text-white"></i>
+                  </button> -->
+                 
+                  <!-- !del class(collapse navbar-collapse) -->
+                  <div class="ms-auto" id="navbarSupportedContent">
+                    
+                    <div class="ms-0">
+                        <button class="btn yellow fw-bold text-white py-0 py-sm-1" type="submit"> <a href=""><i class="bi bi-box-arrow-in-left"></i> <span class="d-none d-sm-inline">Login</span></a></button>
+                        <button class="btn yellow fw-bold text-white py-0 py-sm-1" type="submit"> <a href=""><i class="bi bi-box-arrow-in-left"></i> <span class="d-none d-sm-inline">Signup</span></a></button>
+                        <!-- icons login signup-->
+                        <!-- <button class="btn yellow fw-bold text-white d-sm-none" type="submit">
+                            <i class="bi bi-list fw-bold"></i>
+                        </button>
+                        <button class="btn yellow fw-bold text-white d-sm-none" type="submit">
+                            <i class="bi bi-list fw-bold"></i>
+                        </button> -->
+                        <!-- icons end -->
+                        
+                        <!-- <button class="btn yellow fw-bold text-white " type="submit">Sign up</button> -->
+                    </div>
+                  </div>
+                  <!-- siebar menu icon -->
+                  <button id="sidebar-btn" class="navbar-toggler p-0  ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar" aria-controls="sidebar" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="bi bi-list text-warning fw-bold"></i>
+                  </button>
+                </div>
+            </nav>
+           <!-- *main --> 
+           <div class="container-fluid pb-5">
+            <!-- heading -->
+            <div class=" row p-0 pt-5">
+                <div class="col-12 text-center text-white">
+                    <h1>Manage Levels</h1>
+                </div>
+            </div>
+            <!-- ! card row ----->
+            <div class=" row p-0 pt-5">
+                <!-- card col 1 -->
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <div class="container p-0">
+                        <h5 class="text-white" scope="col" colspan="2">Level 1 list</h5>
+                        <table class="table table-dark table-striped ">
+                            <thead>
+                                <tr>
+                                  <th>userid</th>
+                                  <th>Name</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <th scope="row">10791</th>
+                                  <td class="">John Doe</td>
+                                </tr>
+                                
+                              </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <div class="container p-0">
+                        <h5 class="text-white" scope="col" colspan="2">Level 2 list</h5>
+                        <table class="table table-dark table-striped ">
+                            <thead>
+                                <tr>
+                                  <th>userid</th>
+                                  <th>Name</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <th scope="row">10791</th>
+                                  <td class="">John Doe</td>
+                                </tr>
+                                
+                              </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <div class="container p-0">
+                        <h5 class="text-white" scope="col" colspan="2">Level 3 list</h5>
+                        <table class="table table-dark table-striped ">
+                            <thead>
+                                <tr>
+                                  <th>userid</th>
+                                  <th>Name</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <th scope="row">10791</th>
+                                  <td class="">John Doe</td>
+                                </tr>
+                                
+                              </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+            </div>
+
+        </div>
+        </div>
     </div>
+</div>
     
+                
 
     <script>
         // Function to add a class based on screen size

@@ -20,71 +20,33 @@
                     </a>
                     <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-start align-items-sm-start" id="menu">
                         <li class="nav-item">
-                            <a href="#" class="nav-link align-middle px-0">
+                            <a href="./index.html" class="nav-link align-middle px-0" >
                                 <i class="bi bi-airplane"></i> <span class="ms-1 ">Crash pulse</span>
                             </a>
                         </li>
-                        <!-- <li>
-                            <a href="#submenu1" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
-                                <i class="fs-4 bi-speedometer2"></i> <span class="ms-1 ">Deposit Funds</span> </a>
-                            <ul class="collapse show nav flex-column ms-1" id="submenu1" data-bs-parent="#menu">
-                                <li class="w-100">
-                                    <a href="#" class="nav-link px-0"> <span class="">Item</span> 1 </a>
-                                </li>
-                                <li>
-                                    <a href="#" class="nav-link px-0"> <span class="">Item</span> 2 </a>
-                                </li>
-                            </ul>
-                        </li> -->
                         <li>
-                            <a href="#" class="nav-link px-0 align-middle">
+                            <a href="#" class="sidebar-link nav-link px-0 align-middle" data-page="./pages/deposit_funds.html">
                                 <i class="bi bi-wallet-fill"></i> <span class="ms-1 ">Desposit funds</span></a>
                         </li>
                         <li>
-                            <a href="#submenu2" data-bs-toggle="collapse" class="nav-link px-0 align-middle ">
-                                <i class="bi bi-cash-stack"></i> <span class="ms-1 ">Withdraw funds </span></a>
-                            <ul class="collapse nav flex-column ms-1" id="submenu2" data-bs-parent="#menu">
-                                <li class="w-100">
-                                    <a href="#" class="nav-link px-0"> <span class="">Item</span> 1</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="nav-link px-0"> <span class="">Item</span> 2</a>
-                                </li>
-                            </ul>
+                            <a href="#" class="sidebar-link nav-link px-0 align-middle" data-page="./pages/withdraw_funds.html">
+                                <i class="bi bi-cash-stack"></i> <span class="ms-1 ">Withdraw funds</span></a>
                         </li>
-                        <!-- <li>
-                            <a href="#submenu3" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
-                                <i class="fs-4 bi-grid"></i> <span class="ms-1 "></span> </a>
-                                <ul class="collapse nav flex-column ms-1" id="submenu3" data-bs-parent="#menu">
-                                <li class="w-100">
-                                    <a href="#" class="nav-link px-0"> <span class="">Product</span> 1</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="nav-link px-0"> <span class="">Product</span> 2</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="nav-link px-0"> <span class="">Product</span> 3</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="nav-link px-0"> <span class="">Product</span> 4</a>
-                                </li>
-                            </ul>
-                        </li> -->
                         <li class="nav-item">
-                            <a href="#" class="nav-link align-middle px-0">
+                            <a href="#" class="sidebar-link nav-link align-middle px-0" data-page="./pages/personal_details.html">
                                 <i class="bi bi-person-lines-fill"></i> <span class="ms-1 ">Personal details</span>
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="nav-link px-0 align-middle">
+                            <a href="#" class="sidebar-link nav-link px-0 align-middle" data-page="./pages/transaction_history.html">
                                 <i class="bi bi-files"></i> <span class="ms-1 ">Transaction history</span> </a>
                         </li>
                         <li>
-                            <a href="#" class="nav-link px-0 align-middle">
+                            <a href="#" class="sidebar-link nav-link px-0 align-middle" data-page="./pages/manage_levels.html">
                                 <i class="bi bi-bar-chart"></i> <span class="ms-1 ">Manage level</span> </a>
                         </li>
                         <li>
-                            <a href="#" class="nav-link px-0 align-middle">
+                            <a href="#" class="sidebar-link nav-link px-0 align-middle" data-page="./pages/refferal.html">
                                 <i class="bi bi-link-45deg"></i> <span class="ms-1 ">Refferal</span> </a>
                         </li>
                         <li>
@@ -144,7 +106,7 @@
                     </div>
                 </nav>
                 <!-- *main --> 
-                <div class="container-fluid pb-5">
+                <div class="container-fluid pb-5" id="mainContainer">
                     <!-- slider row -->
                     <div id="slider" class="row p-0 pt-5">
                         <div class="col-lg-12">
@@ -447,6 +409,7 @@
       
         // Event listener to call the function on window resize
         window.addEventListener("resize", addClassBasedOnScreenSize);
+
     </script>
     
 </body>
