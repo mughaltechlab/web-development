@@ -38,7 +38,7 @@ nav .btn a{
 }
 .navbar-brand img{
     width: clamp(100px, 120px ,150px);
-    margin-left: -30px;
+    margin-left: -25px;
 }
 /* sidebar */
 .sidebar-brand img{

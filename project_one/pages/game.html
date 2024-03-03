@@ -157,7 +157,7 @@
     <div class="container-fluid">
         <div class="row flex-nowrap">
             <!--todo: sidebar -->
-            <div id="sidebar" class="collapse sidebar col-auto col-md-3 col-xl-2 px-sm-2 px-0 blackd">
+            <div id="sidebar" class="collapse d-none sidebar col-auto col-md-3 col-xl-2 px-sm-2 px-0 blackd">
                 <div class="d-flex flex-column align-items-start align-items-sm-start px-3 pt-2 text-white ">
                     <!-- logo -->
                     <a href="/"
@@ -282,8 +282,8 @@
                     </div>
                     <!-- ! card row ----->
                     <div class=" row p-0 pt-5">
-                        <!-- card col 1 -->
-                        <div class="col-lg-4 col-md-4 col-sm-12">
+                        <!-- tables tab col 1 -->
+                        <!-- <div class="col-lg-4 col-md-4 col-sm-12">
                             <div class="container p-0">
                                 <h5 class="text-white" scope="col" colspan="2">Total bets</h5>
                                 <div class="table-responsive">
@@ -423,7 +423,165 @@
                                     </table>
                                 </div>
                             </div>
+                        </div> -->
+
+                        <!-- todo tab change -->
+                        <div class="col-lg-3">
+                            <!-- <nav class="nav nav-pills flex-column flex-sm-row" id="myTabs" role="tablist">
+                                <a class="flex-sm-fill text-sm-center nav-link active" id="tab1-tab" data-toggle="tab" href="#tab1" role="tab" aria-controls="tab1" aria-selected="true">All Bets</a>
+                                <a class="flex-sm-fill text-sm-center nav-link" id="tab2-tab" data-toggle="tab" href="#tab2" role="tab" aria-controls="tab2" aria-selected="false">My Bets</a>
+                            </nav> -->
+                        <ul class="nav nav-tabs nav-pills border-0 d-lfex justify-content-center" id="myTabs" role="tablist">
+                            <li class="nav-item">
+                            <a class="nav-link active" id="tab1-tab" data-toggle="tab" href="#tab1" role="tab" aria-controls="tab1" aria-selected="true">All Bets</a>
+                            </li>
+                            <li class="nav-item">
+                            <a class="nav-link" id="tab2-tab" data-toggle="tab" href="#tab2" role="tab" aria-controls="tab2" aria-selected="false">My Bets</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content mt-3" id="myTabsContent">
+                            <div class="tab-pane fade show active" id="tab1" role="tabpanel" aria-labelledby="tab1-tab">
+                                <table class="table table-dark table-striped ">
+                                    <thead>
+                                        <tr>
+                                            <th>User</th>
+                                            <th>Bet</th>
+                                            <th>Mult.</th>
+                                            <th>Cash out</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="">John Doe</td>
+                                            <td>10791</td>
+                                            <td class="">-</td>
+                                            <td class="">-</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="">John Doe</td>
+                                            <td>10791</td>
+                                            <td class="">-</td>
+                                            <td class="">-</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="">John Doe</td>
+                                            <td>10791</td>
+                                            <td class="">-</td>
+                                            <td class="">-</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="">John Doe</td>
+                                            <td>10791</td>
+                                            <td class="">-</td>
+                                            <td class="">-</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="">John Doe</td>
+                                            <td>10791</td>
+                                            <td class="">-</td>
+                                            <td class="">-</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="">John Doe</td>
+                                            <td>10791</td>
+                                            <td class="">-</td>
+                                            <td class="">-</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="">John Doe</td>
+                                            <td>10791</td>
+                                            <td class="">-</td>
+                                            <td class="">-</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="">John Doe</td>
+                                            <td>10791</td>
+                                            <td class="">-</td>
+                                            <td class="">-</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="">John Doe</td>
+                                            <td>10791</td>
+                                            <td class="">-</td>
+                                            <td class="">-</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="">John Doe</td>
+                                            <td>10791</td>
+                                            <td class="">-</td>
+                                            <td class="">-</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="">John Doe</td>
+                                            <td>10791</td>
+                                            <td class="">-</td>
+                                            <td class="">-</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="">John Doe</td>
+                                            <td>10791</td>
+                                            <td class="">-</td>
+                                            <td class="">-</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="">John Doe</td>
+                                            <td>10791</td>
+                                            <td class="">-</td>
+                                            <td class="">-</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="">John Doe</td>
+                                            <td>10791</td>
+                                            <td class="">-</td>
+                                            <td class="">-</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="">John Doe</td>
+                                            <td>10791</td>
+                                            <td class="">-</td>
+                                            <td class="">-</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="">John Doe</td>
+                                            <td>10791</td>
+                                            <td class="">-</td>
+                                            <td class="">-</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="">John Doe</td>
+                                            <td>10791</td>
+                                            <td class="">-</td>
+                                            <td class="">-</td>
+                                        </tr>
+
+
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="tab-pane fade" id="tab2" role="tabpanel" aria-labelledby="tab2-tab">
+                                <table class="table table-dark table-striped ">
+                                    <thead>
+                                        <tr>
+                                            <th>User</th>
+                                            <th>Bet</th>
+                                            <th>Mult.</th>
+                                            <th>Cash out</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="">John Doe</td>
+                                            <td>10791</td>
+                                            <td class="">-</td>
+                                            <td class="">-</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
+                        </div>
+                        
+                        <!-- our game col 2 -->
                         <div class="col-lg-8 col-md-8 col-sm-12">
                             <div class="container p-0">
                                 <!-- <h5 class="text-white" scope="col" colspan="2"></h5> -->
@@ -588,6 +746,9 @@
     </script>
 
 </body>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
     crossorigin="anonymous"></script>
