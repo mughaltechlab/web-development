@@ -23,9 +23,9 @@ body {
 }
 /* login signup sidebar bg image */
 
-@tailwind base;
+/* @tailwind base;
 @tailwind components;
-@tailwind utilities;
+@tailwind utilities; */
 
 @font-face {
   font-family: InterFont;
