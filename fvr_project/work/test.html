@@ -1,0 +1,1481 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+    <!-- todo  -->
+     <link rel="stylesheet" href="../style.css">
+     <link rel="stylesheet" href="./work.css">
+    <!-- todo  -->
+    <title>test</title>
+    <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+  </head>
+
+  <body>
+    <div class="sidebar">
+      <div class="sidebar-div">
+        <div>
+          <button id="cross-btn">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="32"
+              viewBox="0 0 15 15"
+            >
+              <path
+                fill="currentColor"
+                d="M3.64 2.27L7.5 6.13l3.84-3.84A.92.92 0 0 1 12 2a1 1 0 0 1 1 1a.9.9 0 0 1-.27.66L8.84 7.5l3.89 3.89A.9.9 0 0 1 13 12a1 1 0 0 1-1 1a.92.92 0 0 1-.69-.27L7.5 8.87l-3.85 3.85A.92.92 0 0 1 3 13a1 1 0 0 1-1-1a.9.9 0 0 1 .27-.66L6.16 7.5L2.27 3.61A.9.9 0 0 1 2 3a1 1 0 0 1 1-1c.24.003.47.1.64.27"
+              />
+            </svg>
+          </button>
+          <div class="logo-container">
+            <img id="logo-img" src="logo.png" alt="" />
+            <p id="logo-heading">twiz</p>
+          </div>
+          <div class="gradient-background">
+            <img id="gradient" src="Gradient1.png" alt="" />
+            <div class="profile-card">
+              <img
+                src="https://i.pinimg.com/originals/b8/4c/15/b84c1524359fe01b397af3ae210c4f36.gif"
+                alt="Profile Picture"
+              />
+              <p class="card-heading">Jacob Jones</p>
+              <button>View Profile</button>
+            </div>
+          </div>
+          <div class="menubar">
+            <div class="menu-item">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="1em"
+                height="1em"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="white"
+                  d="M3 13h8V3H3zm0 8h8v-6H3zm10 0h8V11h-8zm0-18v6h8V3z"
+                />
+              </svg>
+              <a href="dashboard.html">Dashboard</a>
+            </div>
+            <div class="menu-item hover-item">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="1em"
+                height="1em"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="white"
+                  d="M2 6c0-1.505.78-3.08 2-4c0 .845.69 2 2 2a3 3 0 0 1 3 3c0 .386-.079.752-.212 1.091a74.515 74.515 0 0 1 2.191 1.808l-2.08 2.08a75.852 75.852 0 0 1-1.808-2.191A2.977 2.977 0 0 1 6 10c-2.21 0-4-1.79-4-4m12.152 6.848l1.341-1.341A4.446 4.446 0 0 0 17.5 12A4.5 4.5 0 0 0 22 7.5c0-.725-.188-1.401-.493-2.007L18 9l-2-2l3.507-3.507A4.446 4.446 0 0 0 17.5 3A4.5 4.5 0 0 0 13 7.5c0 .725.188 1.401.493 2.007L3 20l2 2l6.848-6.848a68.562 68.562 0 0 0 5.977 5.449l1.425 1.149l1.5-1.5l-1.149-1.425a68.562 68.562 0 0 0-5.449-5.977"
+                />
+              </svg>
+              <a href="customize.html">Customize</a>
+            </div>
+            <div class="menu-item">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="1em"
+                height="1em"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="none"
+                  stroke="white"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M10 5a2 2 0 1 0 4 0a2 2 0 1 0-4 0M3 19a2 2 0 1 0 4 0a2 2 0 1 0-4 0m14 0a2 2 0 1 0 4 0a2 2 0 1 0-4 0m-8-5a3 3 0 1 0 6 0a3 3 0 1 0-6 0m3-7v4m-5.3 6.8l2.8-2m7.8 2l-2.8-2"
+                />
+              </svg>
+              <a href="social.html">Socials</a>
+            </div>
+            <div class="menu-item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 32 32"><circle cx="8" cy="26" r="1" fill="currentColor"/><path fill="currentColor" d="M5 30h22c1.1 0 2-.9 2-2v-4c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v4c0 1.1.9 2 2 2m0-6h22v4H5zm18-4H9c-3.31 0-6-2.69-6-6c0-3.05 2.29-5.58 5.25-5.95C9.13 4.55 12.33 2 16 2s6.87 2.55 7.75 6.05C26.71 8.42 29 10.95 29 14c0 3.31-2.69 6-6 6M8.95 10A4.01 4.01 0 0 0 5 14c0 2.21 1.79 4 4 4h14c2.21 0 4-1.79 4-4a4 4 0 0 0-3.94-4l-.12.01l-.88.02l-.12-.88C21.51 6.21 18.96 4 16 4s-5.51 2.21-5.93 5.15l-.12.88z"/></svg>
+              <a href="hosting.html">Hosting</a>
+            </div>
+          </div>
+        </div>
+        <div class="card-outer">
+          <div class="new-section">
+            <div class="premium-offer">
+                <img src="imgs/prem.png" alt="Premium Image" class="premium-image">
+                <div class="premium-text">
+                    <p>Premium</p>
+                    <span>Interested in Premium?</span>
+                </div>
+                <button class="visit-button">
+                    <i class="fas fa-external-link-alt"></i>Visit
+                </button>
+            </div>
+            <div class="user-info">
+                <div class="user-info-container">
+                    <div class="user-status"></div>
+                </div>
+                <div class="user-details">
+                    <p class="username">omer</p>
+                    <p class="user-id"style="color: #4e4e4e;">UID: 36363</p>
+                  </div>
+                  <div class="options-button" id="options-button">⋮</div>
+                </div>
+                
+                <!-- Dropdown Menu -->
+                <div class="dropdown-menu" id="dropdown-menu">
+                  <a href="setting.html" id="settings-link"><i class="fas fa-cog"></i> &nbspSettings</a>
+                  <a href="#" id="logout-link"><i class="fas fa-sign-out-alt"></i> &nbspLogout</a>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <style>
+      .options-button {
+          color: white;
+          cursor: pointer;
+          margin-left: 10px;
+          font-size: 20px;
+          position: relative;
+        }
+      
+        .dropdown-menu {
+          display: none;
+          position: absolute;
+          /* top: 153.3px; */
+          width: 90%;
+          right: 8.7px;
+          background-color: #0e0e0e;
+          box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+          border-radius: 5px;
+          overflow: hidden;
+          z-index: 1000;
+      }
+      
+        .dropdown-menu a {
+          color: white;
+          padding: 10px 15px;
+          text-decoration: none;
+          display: block;
+        }
+      
+        .dropdown-menu a:hover {
+          background-color: #141414;
+        }
+        </style>
+      
+      
+    <!-- * Navbar -->
+    <div class="top-bar">
+      <button id="hamburger-btn">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="32"
+          height="32"
+          viewBox="0 0 24 24"
+        >
+          <path
+            fill="none"
+            stroke="white"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M3 17h18M3 12h18M3 7h18"
+          />
+        </svg>
+      </button>
+      <div class="welcome">Welcome, Jacob</div>
+      <div class="top-btns">
+        <a href="shop.html" style="text-decoration: none;">
+          <button id="upgrade">
+            <span class="iconify" data-icon="mdi-cart" data-inline="false" style="font-size: 14px; margin-bottom: -2px;"></span>
+            Shop
+          </button>
+        </a>
+        <button id="not-btn">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="1em"
+            height="1em"
+            viewBox="0 0 24 24"
+            style="margin-top: 3px"
+          >
+            <g fill="none">
+              <path
+                d="M24 0v24H0V0zM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022m-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"
+              />
+              <path
+                fill="white"
+                d="M15 19a2 2 0 0 1-1.85 1.995L13 21h-2a2 2 0 0 1-1.995-1.85L9 19zM12 2a7 7 0 0 1 6.996 6.76L19 9v3.764l1.822 3.644a1.1 1.1 0 0 1-.869 1.586l-.115.006H4.162a1.1 1.1 0 0 1-1.03-1.487l.046-.105L5 12.764V9a7 7 0 0 1 7-7"
+              />
+            </g>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <!-- * Navbar end -->
+
+    <div class="content">
+      <div class="customize">
+        <div class="top">
+          <div class="picture_upload">
+            <div class="br-upload">
+              <label class="upload-label" for="single-file">
+                <h1 class="headin">+</h1>
+              </label>
+              <input
+                class="upload-input"
+                id="single-file"
+                type="file"
+                accept=".pdf, .docx, image/*"
+                onchange="previewImage(this, 'profile-image')"
+              />
+              <div class="upload-list">
+                <!-- <span class="close-btn" onclick="dismissFile('file-name1')">X</span> -->
+              </div>
+            </div>
+            <div class="profile-text">
+              <h1>profile picture</h1>
+              <p>
+                Displayed On
+                <span class="" style="font-size: 14px; font-weight: 600"
+                  >Bio Link</span
+                >
+                Profile
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="bottom-bg">
+          <div class="background">
+            <!-- FOR BACKGROUND -->
+            <div class="first">
+              <div class="bg-main">
+                <div class="bg">
+                  <h3>background</h3>
+                  <p>Or Drag And Drop PNG,GIF Here</p>
+                </div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="2em"
+                  height="2em"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill="#372659"
+                    fill-rule="evenodd"
+                    d="M13 5.828V17h-2V5.828L7.757 9.071L6.343 7.657L12 2l5.657 5.657l-1.414 1.414zM5 19h14a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2"
+                  />
+                </svg>
+              </div>
+              <hr class="line" />
+              <div class="image-wrapper">
+                <div class="file-wrapper" style="position: relative">
+                  <div class="file-section">
+                    <input
+                      type="file"
+                      class="upload-img"
+                      name="upload-img"
+                      accept="image/*"
+                      onchange="displayFileName(this, 'file-name1', 'plus1', 'close-btn1')"
+                    />
+                    <span class="plus" id="plus1">+</span>
+                  </div>
+                  <span
+                    class="close-btn"
+                    id="close-btn1"
+                    onclick="dismissFile('file-name1', 'plus1', 'close-btn1')"
+                    >x</span
+                  >
+                </div>
+                <span class="file-name" id="file-name1"></span>
+              </div>
+            </div>
+            <!-- FOR AUDIO -->
+            <div class="first">
+              <div class="bg-main">
+                <div class="bg">
+                  <h3>Upload Audio</h3>
+                  <p>Or Drag And Drop Mp3/Wav Here</p>
+                </div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="2em"
+                  height="2em"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill="#372659"
+                    fill-rule="evenodd"
+                    d="M13 5.828V17h-2V5.828L7.757 9.071L6.343 7.657L12 2l5.657 5.657l-1.414 1.414zM5 19h14a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2"
+                  />
+                </svg>
+              </div>
+              <hr class="line" />
+              <div class="image-wrapper">
+                <div class="file-wrapper" style="position: relative">
+                  <div class="file-section">
+                    <input
+                      type="file"
+                      name="upload-img"
+                      accept="audio/*"
+                      onchange="displayFileName(this, 'file-name2', 'plus2', 'close-btn2')"
+                    />
+                    <span class="plus" id="plus2">+</span>
+                  </div>
+                  <span
+                    class="close-btn"
+                    id="close-btn2"
+                    onclick="dismissFile('file-name2', 'plus2', 'close-btn2')"
+                    >x</span
+                  >
+                </div>
+                <span class="file-name" id="file-name2"></span>
+                <!-- <span class="close-btn" onclick="dismissFile('file-name2')">X</span> -->
+              </div>
+            </div>
+
+            <!-- FOR CURSOR -->
+            <div class="first">
+              <div class="bg-main">
+                <div class="bg">
+                  <h3>Upload Cursor</h3>
+                  <p>Or Drag And Drop Cursor Here</p>
+                </div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="2em"
+                  height="2em"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill="#372659"
+                    fill-rule="evenodd"
+                    d="M13 5.828V17h-2V5.828L7.757 9.071L6.343 7.657L12 2l5.657 5.657l-1.414 1.414zM5 19h14a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2"
+                  />
+                </svg>
+              </div>
+              <hr class="line" />
+              <div class="image-wrapper">
+                <div class="file-wrapper" style="position: relative">
+                  <div class="file-section">
+                    <input
+                      type="file"
+                      name="upload-img"
+                      accept="image/*"
+                      onchange="displayFileName(this, 'file-name3', 'plus3', 'close-btn3')"
+                    />
+                    <span class="plus" id="plus3">+</span>
+                  </div>
+                  <span
+                    class="close-btn"
+                    id="close-btn3"
+                    onclick="dismissFile('file-name3', 'plus3', 'close-btn3')"
+                    >x</span
+                  >
+                </div>
+                <span class="file-name" id="file-name3"></span>
+                <!-- <span class="close-btn" onclick="dismissFile('file-name3')">X</span> -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="menu-container">
+          <!-- ! dropdowns -->
+          <div class="menu-items">
+            <div class="menu-item-header" onclick="toggleMenu(this)">
+              Profile<i class="fas fa-chevron-up"></i>
+            </div>
+            <div class="menu-item-content">
+              <div id="right-sidebar" class="right-sidebar">
+                <form class="rightbar-form" action="#" method="post">
+                  <!-------------------Username----------------->
+                  <div class="sidebar-item">
+                    <div class="icon-label-container textInputHeading discord-heading">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="1.1em" height="1.1em" viewBox="0 0 24 24"><g fill="none" fill-rule="evenodd"><path d="M24 0v24H0V0zM12.594 23.258l-.012.002l-.071.035l-.02.004l-.014-.004l-.071-.036c-.01-.003-.019 0-.024.006l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.016-.018m.264-.113l-.014.002l-.184.093l-.01.01l-.003.011l.018.43l.005.012l.008.008l.201.092c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022m-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.003-.011l.018-.43l-.003-.012l-.01-.01z"/><path fill="currentColor" d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10s10-4.477 10-10S17.523 2 12 2M8.5 9.5a3.5 3.5 0 1 1 7 0a3.5 3.5 0 0 1-7 0m9.758 7.484A7.985 7.985 0 0 1 12 20a7.985 7.985 0 0 1-6.258-3.016C7.363 15.821 9.575 15 12 15s4.637.821 6.258 1.984"/></g></svg>
+
+                      <label for=" discord-presence-select">
+                        <p>Username</p>
+                      </label>
+                    </div>
+                    <div id="dropdown" class="dropdown">
+                      <input type="text" class="textInput" placeholder="" name="">
+                    </div>
+                  </div>
+                  <!-------------------Description----------------->
+                  <div class="sidebar-item">
+                    <div class="icon-label-container textInputHeading discord-heading">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M8 18h8v-2H8zm0-4h8v-2H8zm-2 8q-.825 0-1.412-.587T4 20V4q0-.825.588-1.412T6 2h8l6 6v12q0 .825-.587 1.413T18 22zm7-13h5l-5-5z"/></svg>
+
+                      <label for=" discord-presence-select">
+                        <p>Description</p>
+                      </label>
+                    </div>
+                    <div id="dropdown" class="dropdown">
+                      <input type="text" class="textInput" placeholder="" name="">
+                    </div>
+                  </div>
+                  <!-------------------Custom Badges----------------->
+                  <div class="sidebar-item">
+                    <div class="icon-label-container badge-heading" >
+                      <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12c5.16-1.26 9-6.45 9-12V5zm3.08 15L12 14.15L8.93 16l.81-3.5l-2.71-2.34l3.58-.31L12 6.55l1.39 3.29l3.58.31l-2.71 2.35z"/></svg>
+                      <label for="background-badges-select">
+                        <p>Badges</p>
+                      </label>
+                    </div>
+                    <input name="" hidden="" id="badge-hidden-input">
+                    <div id="dropdown-badge" class="dropdown-badge nested-dropdown">
+                      <div class="nested-dropdown-header" onclick="toggleNestedMenu(this)">
+                        <span id="nested-dropdown-input" class="nested-dropdown-title">Choose An Option</span>
+                        <div class="nested-dropdown-icon">
+                          <svg class="nested-dropdown-arrow" width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12.7071 14.7071C12.3166 15.0976 11.6834 15.0976 11.2929 14.7071L6.29289 9.70711C5.90237 9.31658 5.90237 8.68342 6.29289 8.29289C6.68342 7.90237 7.31658 7.90237 7.70711 8.29289L12 12.5858L16.2929 8.29289C16.6834 7.90237 17.3166 7.90237 17.7071 8.29289C18.0976 8.68342 18.0976 9.31658 17.7071 9.70711L12.7071 14.7071Z" fill="#777"></path>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="nested-dropdown-list">
+                        <a href="#enable" class="nested-dropdown-item" onclick="dropdownForBadge('None')">None</a>
+                        <a href="#enable" class="nested-dropdown-item" onclick="dropdownForBadge('Enabled')">Enabled</a>
+                        <a href="#Disabled" class="nested-dropdown-item" onclick="dropdownForBadge('Disabled')">Disabled</a>
+                      </div>
+                    </div>
+                  </div>
+                  <!-------------------Music Volume Slider----------------->
+                  <div class="sidebar-item">
+                    <div class="icon-label-container profile-opacity-heading">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2 10v3m4-7v11m4-14v18m4-13v7m4-10v13m4-8v3"/></svg>
+                        <defs>
+                          <style>
+                            .cls-1 {
+                              fill: none;
+                            }
+                          </style>
+                        </defs>
+                        <title>opacity</title>
+                        <rect x="6" y="6" width="4" height="4"></rect>
+                        <rect x="10" y="10" width="4" height="4"></rect>
+                        <rect x="14" y="6" width="4" height="4"></rect>
+                        <rect x="22" y="6" width="4" height="4"></rect>
+                        <rect x="6" y="14" width="4" height="4"></rect>
+                        <rect x="14" y="14" width="4" height="4"></rect>
+                        <rect x="22" y="14" width="4" height="4"></rect>
+                        <rect x="6" y="22" width="4" height="4"></rect>
+                        <rect x="14" y="22" width="4" height="4"></rect>
+                        <rect x="22" y="22" width="4" height="4"></rect>
+                        <rect x="18" y="10" width="4" height="4"></rect>
+                        <rect x="10" y="18" width="4" height="4"></rect>
+                        <rect x="18" y="18" width="4" height="4"></rect>
+                        <rect id="_Transparent_Rectangle_" data-name="<Transparent Rectangle>" class="cls-1" width="32" height="32"></rect>
+                      </svg>
+
+                      <label class="slider-label" for="profile-opacity-range">Volume</label>
+                    </div>
+
+                    <div class="ranger-container">
+                      <div class="rangeBox">
+                        <div class="range-row">
+                          <input class="range" id="range7" type="range" value="0" min="0" max="100" name="">
+                        </div>
+                        <div id="rangeVal7" class="result">0</div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-------------------picture opacity slider----------------->
+                  <div class="sidebar-item">
+                    <div class="icon-label-container profile-opacity-heading">
+                      <svg fill="#ffff" width="22px" height="21px" viewBox="0 0 32 32" id="icon" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                          <style>
+                            .cls-1 {
+                              fill: none;
+                            }
+                          </style>
+                        </defs>
+                        <title>opacity</title>
+                        <rect x="6" y="6" width="4" height="4"></rect>
+                        <rect x="10" y="10" width="4" height="4"></rect>
+                        <rect x="14" y="6" width="4" height="4"></rect>
+                        <rect x="22" y="6" width="4" height="4"></rect>
+                        <rect x="6" y="14" width="4" height="4"></rect>
+                        <rect x="14" y="14" width="4" height="4"></rect>
+                        <rect x="22" y="14" width="4" height="4"></rect>
+                        <rect x="6" y="22" width="4" height="4"></rect>
+                        <rect x="14" y="22" width="4" height="4"></rect>
+                        <rect x="22" y="22" width="4" height="4"></rect>
+                        <rect x="18" y="10" width="4" height="4"></rect>
+                        <rect x="10" y="18" width="4" height="4"></rect>
+                        <rect x="18" y="18" width="4" height="4"></rect>
+                        <rect id="_Transparent_Rectangle_" data-name="<Transparent Rectangle>" class="cls-1" width="32" height="32"></rect>
+                      </svg>
+
+                      <label class="slider-label" for="profile-opacity-range">Profile Opacity</label>
+                    </div>
+
+                    <div class="ranger-container">
+                      <div class="rangeBox">
+                        <div class="range-row">
+                          <input class="range" id="range2" type="range" value="0" min="0" max="100" name="">
+                        </div>
+                        <div id="rangeVal2" class="result">0</div>
+                      </div>
+                    </div>
+                  </div>
+                  <!----------------------profile blue slider-------------->
+                  <div class="sidebar-item">
+                    <div class="icon-label-container profile-opacity-heading">
+                      <svg fill="#ffff" width="22px" height="21px" viewBox="0 0 32 32" id="icon" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                          <style>
+                            .cls-1 {
+                              fill: none;
+                            }
+                          </style>
+                        </defs>
+                        <title>opacity</title>
+                        <rect x="6" y="6" width="4" height="4"></rect>
+                        <rect x="10" y="10" width="4" height="4"></rect>
+                        <rect x="14" y="6" width="4" height="4"></rect>
+                        <rect x="22" y="6" width="4" height="4"></rect>
+                        <rect x="6" y="14" width="4" height="4"></rect>
+                        <rect x="14" y="14" width="4" height="4"></rect>
+                        <rect x="22" y="14" width="4" height="4"></rect>
+                        <rect x="6" y="22" width="4" height="4"></rect>
+                        <rect x="14" y="22" width="4" height="4"></rect>
+                        <rect x="22" y="22" width="4" height="4"></rect>
+                        <rect x="18" y="10" width="4" height="4"></rect>
+                        <rect x="10" y="18" width="4" height="4"></rect>
+                        <rect x="18" y="18" width="4" height="4"></rect>
+                        <rect id="_Transparent_Rectangle_" data-name="<Transparent Rectangle>" class="cls-1" width="32" height="32"></rect>
+                      </svg>
+
+                      <label class="slider-label" for="profile-opacity-range">Profile Blur</label>
+                    </div>
+
+                    <div class="ranger-container">
+                      <div class="rangeBox">
+                        <div class="range-row">
+                          <input class="range" id="range3" type="range" value="0" min="0" max="100" name="">
+                        </div>
+                        <div id="rangeVal3" class="result">0</div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="menu-items">
+            <div class="menu-item-header" onclick="toggleMenu(this)">
+              Effects<i class="fas fa-chevron-up"></i>
+            </div>
+            <div class="menu-item-content">
+              <div id="right-sidebar" class="right-sidebar">
+                <form class="rightbar-form" action="#" method="post">
+                  <!-------------------custom Background Effects----------------->
+
+                  <div class="sidebar-item">
+                    <div class="icon-label-container">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><g fill="none"><path d="M24 0v24H0V0zM12.594 23.258l-.012.002l-.071.035l-.02.004l-.014-.004l-.071-.036c-.01-.003-.019 0-.024.006l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.016-.018m.264-.113l-.014.002l-.184.093l-.01.01l-.003.011l.018.43l.005.012l.008.008l.201.092c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022m-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.003-.011l.018-.43l-.003-.012l-.01-.01z"/><path fill="currentColor" d="M21.129 4.012a1.5 1.5 0 0 1-.141 2.117l-16 14a1.5 1.5 0 0 1-1.976-2.258l16-14a1.5 1.5 0 0 1 2.117.141m0 6.375a1.5 1.5 0 0 1-.141 2.117l-8.715 7.625a1.5 1.5 0 0 1-1.975-2.258l8.714-7.625a1.5 1.5 0 0 1 2.117.141m0 5.875a1.5 1.5 0 0 1-.03 2.01l-.111.107l-2 1.75a1.5 1.5 0 0 1-2.086-2.151l.11-.107l2-1.75a1.5 1.5 0 0 1 2.117.141m-7.286-12.25a1.5 1.5 0 0 1-.14 2.117l-8.715 7.625a1.5 1.5 0 0 1-1.976-2.258l8.715-7.625a1.5 1.5 0 0 1 2.116.141m-6.286 0a1.5 1.5 0 0 1-.03 2.01l-.11.107l-2.43 2.125a1.5 1.5 0 0 1-2.085-2.151l.11-.107l2.429-2.125a1.5 1.5 0 0 1 2.116.141"/></g></svg>
+                      <label for="background-effects-select">
+                        <p>Background Effects</p>
+                      </label>
+                    </div>
+                    <div id="dropdown-background-effect" class="nested-dropdown">
+                      <div class="nested-dropdown-header" onclick="toggleNestedMenu(this)">
+                        <span
+                          id="nested-dropdown-input"
+                          class="nested-dropdown-title"
+                          >Choose an Option</span
+                        >
+                        <div class="nested-dropdown-icon">
+                          <svg
+                            class="nested-dropdown-arrow"
+                            width="20px"
+                            height="20px"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M12.7071 14.7071C12.3166 15.0976 11.6834 15.0976 11.2929 14.7071L6.29289 9.70711C5.90237 9.31658 5.90237 8.68342 6.29289 8.29289C6.68342 7.90237 7.31658 7.90237 7.70711 8.29289L12 12.5858L16.2929 8.29289C16.6834 7.90237 17.3166 7.90237 17.7071 8.29289C18.0976 8.68342 18.0976 9.31658 17.7071 9.70711L12.7071 14.7071Z"
+                              fill="#777"
+                            ></path>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="nested-dropdown-list">
+                        <a
+                          href="#none"
+                          class="nested-dropdown-item"
+                          onclick="selectBackgroundEffect('None')"
+                          >None</a
+                        >
+                        <a
+                          href="#Snowflakes"
+                          class="nested-dropdown-item"
+                          onclick="selectBackgroundEffect('Snowflakes')"
+                          >Snowflakes</a
+                        >
+                        <a
+                          href="#Bats"
+                          class="nested-dropdown-item"
+                          onclick="selectBackgroundEffect('Bats')"
+                          >Bats</a
+                        >
+                        <a
+                          href="#TV"
+                          class="nested-dropdown-item"
+                          onclick="selectBackgroundEffect('TV')"
+                          >TV</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <!-------------------custom username Effects----------------->
+
+                  <div class="sidebar-item">
+                    <div class="icon-label-container">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><g fill="none" fill-rule="evenodd"><path d="M24 0v24H0V0zM12.594 23.258l-.012.002l-.071.035l-.02.004l-.014-.004l-.071-.036c-.01-.003-.019 0-.024.006l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.016-.018m.264-.113l-.014.002l-.184.093l-.01.01l-.003.011l.018.43l.005.012l.008.008l.201.092c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022m-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.003-.011l.018-.43l-.003-.012l-.01-.01z"/><path fill="currentColor" d="M11 2a5 5 0 1 0 0 10a5 5 0 0 0 0-10m0 11c-2.395 0-4.575.694-6.178 1.672c-.8.488-1.484 1.064-1.978 1.69C2.358 16.976 2 17.713 2 18.5c0 .845.411 1.511 1.003 1.986c.56.45 1.299.748 2.084.956C6.665 21.859 8.771 22 11 22c.23 0 .46-.002.685-.005a1 1 0 0 0 .89-1.428A5.973 5.973 0 0 1 12 18c0-1.252.383-2.412 1.037-3.373a1 1 0 0 0-.72-1.557c-.43-.046-.87-.07-1.317-.07m7.864.997a1 1 0 0 0-1.728 0l-.91 1.562l-1.766.382a1 1 0 0 0-.534 1.644l1.204 1.348l-.182 1.798a1 1 0 0 0 1.398 1.016l1.654-.73l1.654.73a1 1 0 0 0 1.398-1.016l-.182-1.799l1.204-1.347a1 1 0 0 0-.534-1.644l-1.766-.382z"/></g></svg>
+                      <label for="username-effects-select">
+                        <p>Username Effects</p>
+                      </label>
+                    </div>
+                    <div id="dropdown-username-effect" class="nested-dropdown">
+                      <div class="nested-dropdown-header" onclick="toggleNestedMenu(this)">
+                        <span id="nested-dropdown-input" class="nested-dropdown-title"
+                          >Choose An Option</span
+                        >
+                        <div class="nested-dropdown-icon">
+                          <svg
+                            class="nested-dropdown-arrow"
+                            width="20px"
+                            height="20px"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M12.7071 14.7071C12.3166 15.0976 11.6834 15.0976 11.2929 14.7071L6.29289 9.70711C5.90237 9.31658 5.90237 8.68342 6.29289 8.29289C6.68342 7.90237 7.31658 7.90237 7.70711 8.29289L12 12.5858L16.2929 8.29289C16.6834 7.90237 17.3166 7.90237 17.7071 8.29289C18.0976 8.68342 18.0976 9.31658 17.7071 9.70711L12.7071 14.7071Z"
+                              fill="#777"
+                            ></path>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="nested-dropdown-list">
+                        <a
+                          href="#None"
+                          class="nested-dropdown-item"
+                          onclick="dropdownUsernameEffects('None')"
+                          >None</a
+                        >
+                        <a
+                          href="#(White) Sparkle"
+                          class="nested-dropdown-item"
+                          onclick="dropdownUsernameEffects('(White) Sparkle')"
+                          >(White) Sparkle</a
+                        >
+                        <a
+                          href="#(RGB) Colorful"
+                          class="nested-dropdown-item"
+                          onclick="dropdownUsernameEffects('(RGB) Colorful')"
+                          >(RGB) Colorful</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <!-------------------Glow Effects----------------->
+
+                  <div class="sidebar-item">
+                    <div class="icon-label-container effect-heading">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 32 32"><g fill="currentColor"><path d="m28.979 17.003l-3.108.214c-.834.06-1.178 1.079-.542 1.608l2.388 1.955c.521.428 1.314.204 1.523-.428l.709-2.127c.219-.632-.292-1.273-.97-1.222M21.75 2.691l-.72 2.9c-.2.78.66 1.41 1.34.98l2.54-1.58c.55-.34.58-1.14.05-1.52l-1.78-1.29a.912.912 0 0 0-1.43.51M6.43 4.995l2.53 1.58c.68.43 1.54-.19 1.35-.98l-.72-2.9a.92.92 0 0 0-1.43-.52l-1.78 1.29c-.53.4-.5 1.19.05 1.53M4.185 20.713l2.29-1.92c.62-.52.29-1.53-.51-1.58l-2.98-.21a.919.919 0 0 0-.94 1.2l.68 2.09c.2.62.97.84 1.46.42m13.61 7.292l-1.12-2.77c-.3-.75-1.36-.75-1.66 0l-1.12 2.77c-.24.6.2 1.26.85 1.26h2.2a.921.921 0 0 0 .85-1.26"/><path d="m17.565 3.324l1.726 3.72c.326.694.967 1.18 1.717 1.29l4.056.624c1.835.278 2.575 2.53 1.293 3.859L23.268 16a2.284 2.284 0 0 0-.612 1.964l.71 4.374c.307 1.885-1.687 3.293-3.354 2.37l-3.405-1.894a2.25 2.25 0 0 0-2.21 0l-3.404 1.895c-1.668.922-3.661-.486-3.355-2.37l.71-4.375A2.284 2.284 0 0 0 7.736 16l-3.088-3.184c-1.293-1.34-.543-3.581 1.293-3.859l4.055-.625a2.307 2.307 0 0 0 1.717-1.29l1.727-3.719c.819-1.765 3.306-1.765 4.124 0"/></g></svg>
+
+                      <label for="background-effects-select">
+                        <p>Glow Effects</p>
+                      </label>
+                    </div>
+                    <input name="" hidden="" id="effect-hidden-input3" />
+                    <div id="dropdown-effect3" class="nested-dropdown">
+                      <div class="nested-dropdown-header" onclick="toggleNestedMenu(this)" >
+                        <span
+                          id="discord-input-effect3"
+                          class="nested-dropdown-title"
+                          >Choose An Option</span
+                        >
+                        <div class="nested-dropdown-icon">
+                          <svg
+                            class="nested-dropdown-arrow"
+                            width="20px"
+                            height="20px"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M12.7071 14.7071C12.3166 15.0976 11.6834 15.0976 11.2929 14.7071L6.29289 9.70711C5.90237 9.31658 5.90237 8.68342 6.29289 8.29289C6.68342 7.90237 7.31658 7.90237 7.70711 8.29289L12 12.5858L16.2929 8.29289C16.6834 7.90237 17.3166 7.90237 17.7071 8.29289C18.0976 8.68342 18.0976 9.31658 17.7071 9.70711L12.7071 14.7071Z"
+                              fill="#777"
+                            ></path>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="nested-dropdown-list">
+                        <a
+                          href="#Enabled"
+                          class="nested-dropdown-item"
+                          onclick="selectGlowEffect('Enabled')"
+                          >Enabled</a
+                        >
+                        <a
+                          href="#Disabled"
+                          class="nested-dropdown-item"
+                          onclick="selectGlowEffect('Disabled')"
+                          >Disabled</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="menu-items">
+            <div class="menu-item-header" onclick="toggleMenu(this)">
+              Color<i class="fas fa-chevron-up"></i>
+            </div>
+            <div class="menu-item-content">
+              <div id="right-sidebar" class="right-sidebar">
+                <form class="rightbar-form" action="#" method="post">
+                  <!-------------------Background Color----------------->
+                  <div class="sidebar-item">
+                    <div class="icon-label-container color-heading">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 48 48"><g fill="none"><path fill="currentColor" fill-rule="evenodd" d="M37 37a4 4 0 0 0 4-4c0-1.473-1.333-3.473-4-6c-2.667 2.527-4 4.527-4 6a4 4 0 0 0 4 4" clip-rule="evenodd"/><path stroke="currentColor" stroke-linecap="round" stroke-width="4" d="m20.854 5.504l3.535 3.536"/><path stroke="currentColor" stroke-linejoin="round" stroke-width="4" d="M23.682 8.333L8.125 23.889L19.44 35.203l15.557-15.557z"/><path stroke="currentColor" stroke-linecap="round" stroke-width="4" d="m12 20.073l16.961 5.577M4 43h40"/></g></svg>
+                      <label for="background-color-select">
+                        <p>Background</p>
+                      </label>
+                    </div>
+                    <div class="color-input-container">
+                      <div class="picker-span">
+                        <input
+                          type="color"
+                          id="color-picker"
+                          class="color-input"
+                          value="#000000"
+                          name=""
+                        />
+                        <span id="result">#09090b</span>
+                      </div>
+
+                      <i
+                        class="fas fa-eye-dropper color-dropper-icon"
+                        onclick="openEyeDropper()"
+                      ></i>
+                    </div>
+                  </div>
+                  <!-------------------Accent----------------->
+                  <div class="sidebar-item">
+                    <div class="icon-label-container color-heading">
+                      <svg
+                        width="17px"
+                        height="17px"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M14 12.5001C14 13.3285 13.3284 14.0001 12.5 14.0001C11.6716 14.0001 11 13.3285 11 12.5001C11 11.6717 11.6716 11.0001 12.5 11.0001C13.3284 11.0001 14 11.6717 14 12.5001Z"
+                          fill="#ffff"
+                        ></path>
+                        <path
+                          d="M16.5 10.0001C17.3284 10.0001 18 9.32854 18 8.50011C18 7.67169 17.3284 7.00011 16.5 7.00011C15.6716 7.00011 15 7.67169 15 8.50011C15 9.32854 15.6716 10.0001 16.5 10.0001Z"
+                          fill="#ffff"
+                        ></path>
+                        <path
+                          d="M13 6.50011C13 7.32854 12.3284 8.00011 11.5 8.00011C10.6716 8.00011 10 7.32854 10 6.50011C10 5.67169 10.6716 5.00011 11.5 5.00011C12.3284 5.00011 13 5.67169 13 6.50011Z"
+                          fill="#ffff"
+                        ></path>
+                        <path
+                          d="M7.50001 12.0001C8.32844 12.0001 9.00001 11.3285 9.00001 10.5001C9.00001 9.67169 8.32844 9.00011 7.50001 9.00011C6.67158 9.00011 6.00001 9.67169 6.00001 10.5001C6.00001 11.3285 6.67158 12.0001 7.50001 12.0001Z"
+                          fill="#ffff"
+                        ></path>
+                        <path
+                          d="M14 17.5001C14 18.3285 13.3284 19.0001 12.5 19.0001C11.6716 19.0001 11 18.3285 11 17.5001C11 16.6717 11.6716 16.0001 12.5 16.0001C13.3284 16.0001 14 16.6717 14 17.5001Z"
+                          fill="#ffff"
+                        ></path>
+                        <path
+                          d="M7.50001 17.0001C8.32844 17.0001 9.00001 16.3285 9.00001 15.5001C9.00001 14.6717 8.32844 14.0001 7.50001 14.0001C6.67158 14.0001 6.00001 14.6717 6.00001 15.5001C6.00001 16.3285 6.67158 17.0001 7.50001 17.0001Z"
+                          fill="#ffff"
+                        ></path>
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M11.5017 1.02215C15.4049 0.791746 19.5636 2.32444 21.8087 5.41131C22.5084 6.37324 22.8228 7.63628 22.6489 8.83154C22.471 10.054 21.7734 11.2315 20.4472 11.8945C19.6389 12.2987 18.7731 12.9466 18.2401 13.668C17.7158 14.3778 17.6139 14.9917 17.8944 15.5529C18.4231 16.6102 18.8894 17.9257 18.8106 19.1875C18.7699 19.8375 18.5828 20.4946 18.1664 21.0799C17.7488 21.6667 17.1448 22.1192 16.3714 22.4286C14.6095 23.1333 12.6279 23.1643 10.8081 22.8207C8.98579 22.4765 7.24486 21.7421 5.92656 20.8194C4.00568 19.4748 2.47455 17.6889 1.71371 15.4464C0.9504 13.1965 0.995912 10.5851 2.06024 7.65803C3.64355 3.30372 7.56248 1.25469 11.5017 1.02215ZM11.6196 3.01868C8.26589 3.21665 5.18483 4.9176 3.93984 8.34149C3.00414 10.9148 3.01388 13.0536 3.60768 14.8038C4.20395 16.5613 5.42282 18.0255 7.07347 19.1809C8.14405 19.9303 9.6169 20.5604 11.1792 20.8554C12.7442 21.151 14.3181 21.0959 15.6286 20.5716C16.308 20.2999 16.7678 19.8099 16.8145 19.0627C16.8606 18.3245 16.5769 17.3901 16.1056 16.4473C15.3639 14.9639 15.8542 13.5318 16.6315 12.4796C17.4002 11.4391 18.5455 10.6093 19.5528 10.1057C20.2266 9.76878 20.5747 9.19623 20.6697 8.54355C20.7686 7.86365 20.5831 7.12638 20.1913 6.58769C18.4364 4.17486 15.0093 2.81858 11.6196 3.01868Z"
+                          fill="#ffff"
+                        ></path>
+                      </svg>
+                      <label for="background-color-select">
+                        <p>Text</p>
+                      </label>
+                    </div>
+                    <div class="color-input-container">
+                      <div class="picker-span">
+                        <input
+                          type="color"
+                          id="color-picker2"
+                          class="color-input"
+                          value="#ffffff"
+                          name=""
+                        />
+                        <span id="result2">#ffffff</span>
+                      </div>
+
+                      <i
+                        class="fas fa-eye-dropper color-dropper-icon"
+                        onclick="openEyeDropper2()"
+                      ></i>
+                    </div>
+                  </div>
+                  <!-------------------Text----------------->
+                  <div class="sidebar-item">
+                    <div class="icon-label-container color-heading">
+                      <svg
+                        width="17px"
+                        height="17px"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M14 12.5001C14 13.3285 13.3284 14.0001 12.5 14.0001C11.6716 14.0001 11 13.3285 11 12.5001C11 11.6717 11.6716 11.0001 12.5 11.0001C13.3284 11.0001 14 11.6717 14 12.5001Z"
+                          fill="#ffff"
+                        ></path>
+                        <path
+                          d="M16.5 10.0001C17.3284 10.0001 18 9.32854 18 8.50011C18 7.67169 17.3284 7.00011 16.5 7.00011C15.6716 7.00011 15 7.67169 15 8.50011C15 9.32854 15.6716 10.0001 16.5 10.0001Z"
+                          fill="#ffff"
+                        ></path>
+                        <path
+                          d="M13 6.50011C13 7.2854 12.3284 8.00011 11.5 8.00011C10.6716 8.00011 10 7.32854 10 6.50011C10 5.67169 10.6716 5.00011 11.5 5.00011C12.3284 5.00011 13 5.67169 13 6.50011Z"
+                          fill="#ffff"
+                        ></path>
+                        <path
+                          d="M7.50001 12.0001C8.32844 12.0001 9.00001 11.3285 9.00001 10.5001C9.00001 9.67169 8.32844 9.00011 7.50001 9.00011C6.67158 9.00011 6.00001 9.67169 6.00001 10.5001C6.00001 11.3285 6.67158 12.0001 7.50001 12.0001Z"
+                          fill="#ffff"
+                        ></path>
+                        <path
+                          d="M14 17.5001C14 18.3285 13.3284 19.0001 12.5 19.0001C11.6716 19.0001 11 18.3285 11 17.5001C11 16.6717 11.6716 16.0001 12.5 16.0001C13.3284 16.0001 14 16.6717 14 17.5001Z"
+                          fill="#ffff"
+                        ></path>
+                        <path
+                          d="M7.50001 17.0001C8.32844 17.0001 9.00001 16.3285 9.00001 15.5001C9.00001 14.6717 8.32844 14.0001 7.50001 14.0001C6.67158 14.0001 6.00001 14.6717 6.00001 15.5001C6.00001 16.3285 6.67158 17.0001 7.50001 17.0001Z"
+                          fill="#ffff"
+                        ></path>
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M11.5017 1.02215C15.4049 0.791746 19.5636 2.32444 21.8087 5.41131C22.5084 6.37324 22.8228 7.63628 22.6489 8.83154C22.471 10.054 21.7734 11.2315 20.4472 11.8945C19.6389 12.2987 18.7731 12.9466 18.2401 13.668C17.7158 14.3778 17.6139 14.9917 17.8944 15.5529C18.4231 16.6102 18.8894 17.9257 18.8106 19.1875C18.7699 19.8375 18.5828 20.4946 18.1664 21.0799C17.7488 21.6667 17.1448 22.1192 16.3714 22.4286C14.6095 23.1333 12.6279 23.1643 10.8081 22.8207C8.98579 22.4765 7.24486 21.7421 5.92656 20.8194C4.00568 19.4748 2.47455 17.6889 1.71371 15.4464C0.9504 13.1965 0.995912 10.5851 2.06024 7.65803C3.64355 3.30372 7.56248 1.25469 11.5017 1.02215ZM11.6196 3.01868C8.26589 3.21665 5.18483 4.9176 3.93984 8.34149C3.00414 10.9148 3.01388 13.0536 3.60768 14.8038C4.20395 16.5613 5.42282 18.0255 7.07347 19.1809C8.14405 19.9303 9.6169 20.5604 11.1792 20.8554C12.7442 21.151 14.3181 21.0959 15.6286 20.5716C16.308 20.2999 16.7678 19.8099 16.8145 19.0627C16.8606 18.3245 16.5769 17.3901 16.1056 16.4473C15.3639 14.9639 15.8542 13.5318 16.6315 12.4796C17.4002 11.4391 18.5455 10.6093 19.5528 10.1057C20.2266 9.76878 20.5747 9.19623 20.6697 8.54355C20.7686 7.86365 20.5831 7.12638 20.1913 6.58769C18.4364 4.17486 15.0093 2.81858 11.6196 3.01868Z"
+                          fill="#ffff"
+                        ></path>
+                      </svg>
+                      <label for="background-color-select">
+                        <p>Accent</p>
+                      </label>
+                    </div>
+                    <div class="color-input-container">
+                      <div class="picker-span">
+                        <input
+                          type="color"
+                          id="color-picker3"
+                          class="color-input"
+                          value="#ffffff"
+                          name=""
+                        />
+                        <span id="result3">#0000001a</span>
+                      </div>
+
+                      <i
+                        class="fas fa-eye-dropper color-dropper-icon"
+                        onclick="openEyeDropper3()"
+                      ></i>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="menu-items">
+            <div class="menu-item-header" onclick="toggleMenu(this)">
+              Module<i class="fas fa-chevron-up"></i>
+            </div>
+            <div class="menu-item-content">
+              <div id="right-sidebar" class="right-sidebar">
+                <form class="rightbar-form" action="#" method="post">
+                  <!-------------------custom dicord dropdown----------------->
+
+                  <div class="sidebar-item">
+                    <div class="icon-label-container discord-heading">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        x="0px"
+                        y="0px"
+                        width="18"
+                        height="23"
+                        viewBox="0 0 30 30"
+                      >
+                        <path
+                          d="M25.12,6.946c-2.424-1.948-6.257-2.278-6.419-2.292c-0.256-0.022-0.499,0.123-0.604,0.357 c-0.004,0.008-0.218,0.629-0.425,1.228c2.817,0.493,4.731,1.587,4.833,1.647c0.478,0.278,0.638,0.891,0.359,1.368 C22.679,9.572,22.344,9.75,22,9.75c-0.171,0-0.343-0.043-0.501-0.135C21.471,9.598,18.663,8,15.002,8 C11.34,8,8.531,9.599,8.503,9.615C8.026,9.892,7.414,9.729,7.137,9.251C6.86,8.775,7.021,8.164,7.497,7.886 c0.102-0.06,2.023-1.158,4.848-1.65c-0.218-0.606-0.438-1.217-0.442-1.225c-0.105-0.235-0.348-0.383-0.604-0.357 c-0.162,0.013-3.995,0.343-6.451,2.318C3.564,8.158,1,15.092,1,21.087c0,0.106,0.027,0.209,0.08,0.301 c1.771,3.11,6.599,3.924,7.699,3.959c0.007,0.001,0.013,0.001,0.019,0.001c0.194,0,0.377-0.093,0.492-0.25l1.19-1.612 c-2.61-0.629-3.99-1.618-4.073-1.679c-0.444-0.327-0.54-0.953-0.213-1.398c0.326-0.443,0.95-0.541,1.394-0.216 C7.625,20.217,10.172,22,15,22c4.847,0,7.387-1.79,7.412-1.808c0.444-0.322,1.07-0.225,1.395,0.221 c0.324,0.444,0.23,1.066-0.212,1.392c-0.083,0.061-1.456,1.048-4.06,1.677l1.175,1.615c0.115,0.158,0.298,0.25,0.492,0.25 c0.007,0,0.013,0,0.019-0.001c1.101-0.035,5.929-0.849,7.699-3.959c0.053-0.092,0.08-0.195,0.08-0.301 C29,15.092,26.436,8.158,25.12,6.946z M11,19c-1.105,0-2-1.119-2-2.5S9.895,14,11,14s2,1.119,2,2.5S12.105,19,11,19z M19,19 c-1.105,0-2-1.119-2-2.5s0.895-2.5,2-2.5s2,1.119,2,2.5S20.105,19,19,19z"
+                          stroke="white"
+                          fill="white"
+                        ></path>
+                      </svg>
+
+                      <label for="discord-presence-select">
+                        <p>Discord Presence</p>
+                      </label>
+                    </div>
+                    <input hidden id="effect-hidden-input4" />
+                    <div id="dropdown-effect4" class="nested-dropdown">
+                      <div class="nested-dropdown-header" onclick="toggleNestedMenu(this)">
+                        <span
+                          id="discord-input-effect4"
+                          class="nested-dropdown-title"
+                          >Choose An Option</span
+                        >
+                        <div class="nested-dropdown-icon">
+                          <svg
+                            class="nested-dropdown-arrow"
+                            width="20px"
+                            height="20px"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M12.7071 14.7071C12.3166 15.0976 11.6834 15.0976 11.2929 14.7071L6.29289 9.70711C5.90237 9.31658 5.90237 8.68342 6.29289 8.29289C6.68342 7.90237 7.31658 7.90237 7.70711 8.29289L12 12.5858L16.2929 8.29289C16.6834 7.90237 17.3166 7.90237 17.7071 8.29289C18.0976 8.68342 18.0976 9.31658 17.7071 9.70711L12.7071 14.7071Z"
+                              fill="#777"
+                            ></path>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="nested-dropdown-list" >
+                        <a
+                          href="#enabled"
+                          class="nested-dropdown-item"
+                          onclick="dropdownDiscordPresence('Enabled')"
+                          >Enabled</a
+                        >
+                        <a
+                          href="#disabled"
+                          class="nested-dropdown-item"
+                          onclick="dropdownDiscordPresence('Disabled')"
+                          >Disabled</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <!-------------------custom server dropdown----------------->
+
+                  <div class="sidebar-item">
+                    <div class="icon-label-container discord-heading">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        x="0px"
+                        y="0px"
+                        width="18"
+                        height="23"
+                        viewBox="0 0 30 30"
+                      >
+                        <path
+                          d="M25.12,6.946c-2.424-1.948-6.257-2.278-6.419-2.292c-0.256-0.022-0.499,0.123-0.604,0.357 c-0.004,0.008-0.218,0.629-0.425,1.228c2.817,0.493,4.731,1.587,4.833,1.647c0.478,0.278,0.638,0.891,0.359,1.368 C22.679,9.572,22.344,9.75,22,9.75c-0.171,0-0.343-0.043-0.501-0.135C21.471,9.598,18.663,8,15.002,8 C11.34,8,8.531,9.599,8.503,9.615C8.026,9.892,7.414,9.729,7.137,9.251C6.86,8.775,7.021,8.164,7.497,7.886 c0.102-0.06,2.023-1.158,4.848-1.65c-0.218-0.606-0.438-1.217-0.442-1.225c-0.105-0.235-0.348-0.383-0.604-0.357 c-0.162,0.013-3.995,0.343-6.451,2.318C3.564,8.158,1,15.092,1,21.087c0,0.106,0.027,0.209,0.08,0.301 c1.771,3.11,6.599,3.924,7.699,3.959c0.007,0.001,0.013,0.001,0.019,0.001c0.194,0,0.377-0.093,0.492-0.25l1.19-1.612 c-2.61-0.629-3.99-1.618-4.073-1.679c-0.444-0.327-0.54-0.953-0.213-1.398c0.326-0.443,0.95-0.541,1.394-0.216 C7.625,20.217,10.172,22,15,22c4.847,0,7.387-1.79,7.412-1.808c0.444-0.322,1.07-0.225,1.395,0.221 c0.324,0.444,0.23,1.066-0.212,1.392c-0.083,0.061-1.456,1.048-4.06,1.677l1.175,1.615c0.115,0.158,0.298,0.25,0.492,0.25 c0.007,0,0.013,0,0.019-0.001c1.101-0.035,5.929-0.849,7.699-3.959c0.053-0.092,0.08-0.195,0.08-0.301 C29,15.092,26.436,8.158,25.12,6.946z M11,19c-1.105,0-2-1.119-2-2.5S9.895,14,11,14s2,1.119,2,2.5S12.105,19,11,19z M19,19 c-1.105,0-2-1.119-2-2.5s0.895-2.5,2-2.5s2,1.119,2,2.5S20.105,19,19,19z"
+                          stroke="white"
+                          fill="white"
+                        ></path>
+                      </svg>
+
+                      <label for=" discord-presence-select">
+                        <p>Server Presence</p>
+                      </label>
+                    </div>
+                    <input hidden id="effect-hidden-input5" />
+                    <div id="dropdown-effect5" class="nested-dropdown">
+                      <div class="nested-dropdown-header" onclick="toggleNestedMenu(this)">
+                        <span
+                          id="server-presence-input-effect"
+                          class="nested-dropdown-title"
+                          >Choose An Option</span
+                        >
+                        <div class="nested-dropdown-icon">
+                          <svg
+                            class="nested-dropdown-arrow"
+                            width="20px"
+                            height="20px"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M12.7071 14.7071C12.3166 15.0976 11.6834 15.0976 11.2929 14.7071L6.29289 9.70711C5.90237 9.31658 5.90237 8.68342 6.29289 8.29289C6.68342 7.90237 7.31658 7.90237 7.70711 8.29289L12 12.5858L16.2929 8.29289C16.6834 7.90237 17.3166 7.90237 17.7071 8.29289C18.0976 8.68342 18.0976 9.31658 17.7071 9.70711L12.7071 14.7071Z"
+                              fill="#777"
+                            ></path>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="nested-dropdown-list">
+                        <a
+                          href="#enabled"
+                          class="nested-dropdown-item"
+                          onclick="dropdownServerPresence('Enabled')"
+                          >Enabled</a
+                        >
+                        <a
+                          href="#disabled"
+                          class="nested-dropdown-item"
+                          onclick="dropdownServerPresence('Disabled')"
+                          >Disabled</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="menu-items">
+            <div class="menu-item-header" onclick="toggleMenu(this)">
+              Premium<i class="fas fa-chevron-up"></i>
+            </div>
+            <div class="menu-item-content">
+              <div id="right-sidebar" class="right-sidebar">
+                <form class="rightbar-form" action="#" method="post">
+                  <!-------------------Custom font----------------->
+                  <div class="sidebar-item font-container">
+                    <div class="icon-label-container font-heading">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M15.088 6.412a2.84 2.84 0 0 0-1.347-.955l-1.378-.448a.544.544 0 0 1 0-1.025l1.378-.448A2.84 2.84 0 0 0 15.5 1.774l.011-.034l.448-1.377a.544.544 0 0 1 1.027 0l.447 1.377a2.84 2.84 0 0 0 1.799 1.796l1.377.448l.028.007a.544.544 0 0 1 0 1.025l-1.378.448a2.84 2.84 0 0 0-1.798 1.796l-.448 1.377l-.013.034a.544.544 0 0 1-1.013-.034l-.448-1.377a2.8 2.8 0 0 0-.45-.848m7.695 3.801l-.766-.248a1.58 1.58 0 0 1-.998-.999l-.25-.764a.302.302 0 0 0-.57 0l-.248.764a1.58 1.58 0 0 1-.984.999l-.765.248a.302.302 0 0 0 0 .57l.765.249a1.58 1.58 0 0 1 1 1.002l.248.764a.302.302 0 0 0 .57 0l.249-.764a1.58 1.58 0 0 1 .999-.999l.765-.248a.302.302 0 0 0 0-.57zM13.61 2.468a3 3 0 0 0-4.367 1.35l-4.26 9.94l-.053.124l-1.687 3.936a3 3 0 0 0 5.515 2.364L9.693 18h4.615l.935 2.182a3 3 0 1 0 5.515-2.364l-1.687-3.936l-.053-.125l-.804-1.875l-.14-.037q-.132-.032-.244-.066a1.33 1.33 0 0 1-.87-1.23a1.3 1.3 0 0 1 .18-.66a1.45 1.45 0 0 1-.68.16c-.238 0-.467-.057-.673-.158a2.6 2.6 0 0 1-.827-.525l2.237 5.22l.018.041l1.705 3.98a1 1 0 1 1-1.838.787L15.627 16H8.374L6.92 19.394a1 1 0 1 1-1.838-.788l1.705-3.979q.007-.02.018-.041l4.22-9.848A1.5 1.5 0 0 1 11 4.47A1.565 1.565 0 0 1 12.05 3l1.34-.44q.113-.038.22-.09M9.232 14h5.538L12 7.54z"/></svg>
+                      <label for="background-fonts-select">
+                        <p>Custom Fonts</p>
+                      </label>
+                    </div>
+                    <input name="" hidden="" id="font-hidden-input" />
+                    <div id="dropdown-font" class="nested-dropdown">
+                      <div class="nested-dropdown-header" onclick="toggleNestedMenu(this)">
+                        <span id="font-input-effect" class="nested-dropdown-title"
+                          >Choose An Option</span
+                        >
+                        <div class="nested-dropdown-arrow"style="
+                        display: flex;
+                    ">
+                          <svg
+                            width="20px"
+                            height="20px"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M12.7071 14.7071C12.3166 15.0976 11.6834 15.0976 11.2929 14.7071L6.29289 9.70711C5.90237 9.31658 5.90237 8.68342 6.29289 8.29289C6.68342 7.90237 7.31658 7.90237 7.70711 8.29289L12 12.5858L16.2929 8.29289C16.6834 7.90237 17.3166 7.90237 17.7071 8.29289C18.0976 8.68342 18.0976 9.31658 17.7071 9.70711L12.7071 14.7071Z"
+                              fill="#777"
+                            ></path>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="nested-dropdown-list" >
+                        <a
+                          href="#None"
+                          class="nested-dropdown-item"
+                          onclick="selectFontEffect('None')"
+                          >None</a
+                        >
+                        <a
+                          href="#Satoshi"
+                          class="nested-dropdown-item"
+                          onclick="selectFontEffect('Satoshi')"
+                          >Satoshi</a
+                        >
+                        <a
+                          href="#Hacker"
+                          class="nested-dropdown-item"
+                          onclick="selectFontEffect('Hacker')"
+                          >Hacker</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="sidebar-item font-container">
+                    <div class="icon-label-container font-heading">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 20 20"><path fill="currentColor" d="M7.5 2a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2a.5.5 0 0 1 .5-.5M3.61 3.61a.5.5 0 0 1 .708 0l1.414 1.415a.5.5 0 1 1-.707.707L3.611 4.318a.5.5 0 0 1 0-.707m7.78 0a.5.5 0 0 1 0 .708L9.974 5.732a.5.5 0 1 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0M2 7.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5m5.5.532v9.26a.5.5 0 0 0 .854.354l2.56-2.56a2 2 0 0 1 1.414-.586h3.232a.5.5 0 0 0 .31-.892L8.31 7.639a.5.5 0 0 0-.81.393"/></svg>
+                      <label for="cursor-effects-select">
+                        <p>Cursor Effects</p>
+                      </label>
+                    </div>
+                    <input hidden id="effect-hidden-input6" />
+                    <div id="dropdown-effect6" class="nested-dropdown">
+                      <div class="nested-dropdown-header" onclick="toggleNestedMenu(this)">
+                        <span
+                          id="discord-input-effect6"
+                          class="nested-dropdown-title"
+                          >Choose An Option</span
+                        >
+                        <div class="nested-dropdown-icon">
+                          <svg
+                            class="nested-dropdown-arrow"
+                            width="20px"
+                            height="20px"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M12.7071 14.7071C12.3166 15.0976 11.6834 15.0976 11.2929 14.7071L6.29289 9.70711C5.90237 9.31658 5.90237 8.68342 6.29289 8.29289C6.68342 7.90237 7.31658 7.90237 7.70711 8.29289L12 12.5858L16.2929 8.29289C16.6834 7.90237 17.3166 7.90237 17.7071 8.29289C18.0976 8.68342 18.0976 9.31658 17.7071 9.70711L12.7071 14.7071Z"
+                              fill="#777"
+                            ></path>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="nested-dropdown-list" >
+                        <a
+                          href="#None"
+                          class="nested-dropdown-item"
+                          onclick="selectCursorEffect('None')"
+                          >None</a
+                        >
+                        <a
+                          href="#Sparkle"
+                          class="nested-dropdown-item"
+                          onclick="selectCursorEffect('Sparkle')"
+                          >Sparkle</a
+                        >
+                        <a
+                          href="#Circle"
+                          class="nested-dropdown-item"
+                          onclick="selectCursorEffect('Circle')"
+                          >Circle</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                <!-------------------Banner----------------->
+                  <div class="sidebar-item">
+                    <div class="icon-label-container">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 256 256"><path fill="currentColor" d="m131.79 69.65l-43.63 96a4 4 0 0 1-3.64 2.35H28.23a8.2 8.2 0 0 1-6.58-3.13a8 8 0 0 1 .43-10.25L57.19 116L22.08 77.38a8 8 0 0 1-.43-10.26A8.22 8.22 0 0 1 28.23 64h99.92a4 4 0 0 1 3.64 5.65m105.77-27.41a8.3 8.3 0 0 0-5.79-2.24H168a8 8 0 0 0-7.28 4.69l-42.57 93.65a4 4 0 0 0 3.64 5.66h57.79l-34.86 76.69a8 8 0 1 0 14.56 6.62l80-176a8 8 0 0 0-1.72-9.07"/></svg>
+                      <label for="custom-cursor-file"> Banner </label>
+                    </div>
+                    <span id="filename2" class="file-name-display no-file">
+                      <p>No file chosen</p>
+
+                      <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" id="upload-icon-audio">
+                        <path d="M12 15L12 2M12 2L15 5.5M12 2L9 5.5" stroke="#777" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M8 22.0002H16C18.8284 22.0002 20.2426 22.0002 21.1213 21.1215C22 20.2429 22 18.8286 22 16.0002V15.0002C22 12.1718 22 10.7576 21.1213 9.8789C20.3529 9.11051 19.175 9.01406 17 9.00195M7 9.00195C4.82497 9.01406 3.64706 9.11051 2.87868 9.87889C2 10.7576 2 12.1718 2 15.0002L2 16.0002C2 18.8286 2 20.2429 2.87868 21.1215C3.17848 21.4213 3.54062 21.6188 4 21.749" stroke="#777" stroke-width="1.5" stroke-linecap="round"></path>
+                      </svg>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 72 72" id="delete-icon-audio" style="display: none; margin-top: 2px">
+                        <path fill="#777" d="m58.14 21.78l-7.76-8.013l-14.29 14.22l-14.22-14.22l-8.013 8.013L28.217 36l-14.36 14.22l8.014 8.013l14.22-14.22l14.29 14.22l7.76-8.013L43.921 36z"></path>
+                        <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="m58.14 21.78l-7.76-8.013l-14.29 14.22l-14.22-14.22l-8.013 8.013L28.207 36l-14.35 14.22l8.014 8.013l14.22-14.22l14.29 14.22l7.76-8.013L43.921 36z"></path>
+                      </svg>
+                    </span>
+                    <input type="file" id="custom-cursor-file2" class="custom-file-upload" onchange="updateFileName2()" name="">
+                  </div>
+
+                  <!-------------------the custom cuser----------------->
+                  <!-- <div class="sidebar-item">
+                    <div class="icon-label-container">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        x="0px"
+                        y="0px"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 128 128"
+                      >
+                        <path
+                          d="M82.1 117.9c.4 0 .8-.1 1.2-.2 1.5-.6 2.3-2.4 1.6-3.9l-9.3-22.3h20.4c2 0 3.9-1.2 4.6-3.1.8-1.9.3-4-1.2-5.5L56.5 41.1c-1.4-1.4-3.6-1.8-5.4-1-1.9.8-3 2.6-3 4.6v60.2c0 2.1 1.2 3.9 3.2 4.7.6.2 1.2.4 1.8.4 1.4 0 2.7-.6 3.6-1.6l13.5-14.4 9.2 22.2C79.9 117.2 81 117.9 82.1 117.9zM40.6 22.7c.5 1.2 1.6 1.8 2.8 1.8.4 0 .8-.1 1.2-.2 1.5-.6 2.3-2.4 1.6-3.9L40.3 6.5c-.6-1.5-2.4-2.3-3.9-1.6-1.5.6-2.3 2.4-1.6 3.9L40.6 22.7zM16.7 32.4L31 36.9c.3.1.6.1.9.1 1.3 0 2.5-.8 2.9-2.1.5-1.6-.4-3.3-2-3.8l-14.3-4.5c-1.6-.5-3.3.4-3.8 2C14.2 30.2 15.1 31.9 16.7 32.4zM58.9 24.9c.4.2.9.3 1.4.3 1.1 0 2.1-.6 2.7-1.6l7-13.3c.8-1.5.2-3.3-1.3-4-1.5-.8-3.3-.2-4 1.3l-7 13.3C56.9 22.4 57.4 24.2 58.9 24.9z"
+                          fill="#ffffff"
+                        ></path>
+                      </svg>
+                      <label for="custom-cursor-file"> Custom Cursor </label>
+                    </div>
+                    <span id="filename5" class="file-name-display no-file">
+                      <p>No file chosen</p>
+
+                      <svg
+                        width="20px"
+                        height="20px"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        id="upload-icon-cursor"
+                      >
+                        <path
+                          d="M12 15L12 2M12 2L15 5.5M12 2L9 5.5"
+                          stroke="#777"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></path>
+                        <path
+                          d="M8 22.0002H16C18.8284 22.0002 20.2426 22.0002 21.1213 21.1215C22 20.2429 22 18.8286 22 16.0002V15.0002C22 12.1718 22 10.7576 21.1213 9.8789C20.3529 9.11051 19.175 9.01406 17 9.00195M7 9.00195C4.82497 9.01406 3.64706 9.11051 2.87868 9.87889C2 10.7576 2 12.1718 2 15.0002L2 16.0002C2 18.8286 2 20.2429 2.87868 21.1215C3.17848 21.4213 3.54062 21.6188 4 21.749"
+                          stroke="#777"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                        ></path>
+                      </svg>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20px"
+                        height="20px"
+                        viewBox="0 0 72 72"
+                        id="delete-icon-cursor"
+                        style="display: none; margin-top: 2px"
+                      >
+                        <path
+                          fill="#777"
+                          d="m58.14 21.78l-7.76-8.013l-14.29 14.22l-14.22-14.22l-8.013 8.013L28.217 36l-14.36 14.22l8.014 8.013l14.22-14.22l14.29 14.22l7.76-8.013L43.921 36z"
+                        />
+                        <path
+                          fill="none"
+                          stroke="#000"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-miterlimit="10"
+                          stroke-width="2"
+                          d="m58.14 21.78l-7.76-8.013l-14.29 14.22l-14.22-14.22l-8.013 8.013L28.207 36l-14.35 14.22l8.014 8.013l14.22-14.22l14.29 14.22l7.76-8.013L43.921 36z"
+                        />
+                      </svg>
+                    </span>
+                    <input
+                      type="file"
+                      id="custom-cursor-file5"
+                      class="custom-file-upload"
+                      onchange="updateFileName5()"
+                      name=""
+                    />
+                  </div> -->
+                  <!-------------------page Alias----------------->
+                  <div class="sidebar-item">
+                    <div
+                      class="icon-label-container textInputHeading discord-heading"
+                    >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16"><path fill="currentColor" d="M3 3a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v6.5q-.042 0-.083.003h-2.834L10 9.5h-.5A3 3 0 0 0 7.841 15H5a2 2 0 0 1-2-2zm6.59 1.992A.5.5 0 0 0 9.5 4h-3l-.09.008A.5.5 0 0 0 6.5 5h3zM10 8a.5.5 0 0 0-.5-.5h-3l-.09.008a.5.5 0 0 0 .09.992h3l.09-.008A.5.5 0 0 0 10 8m-3 4.5A2.5 2.5 0 0 1 9.5 10h.5a.5.5 0 0 1 0 1h-.5a1.5 1.5 0 0 0 0 3h.5a.5.5 0 0 1 0 1h-.5A2.5 2.5 0 0 1 7 12.5m5.5-2a.5.5 0 0 1 .5-.5h.5a2.5 2.5 0 0 1 0 5H13a.5.5 0 0 1 0-1h.5a1.5 1.5 0 0 0 0-3H13a.5.5 0 0 1-.5-.5m-3.5 2a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5"/></svg>
+
+                      <label for=" discord-presence-select">
+                        <p>Page Alias</p>
+                      </label>
+                    </div>
+                    <div id="dropdown" class="dropdown">
+                      <input
+                        type="text"
+                        class="textInput"
+                        placeholder=""
+                        name=""
+                      />
+                    </div>
+                  </div>
+                  <!-------------------Profile Size----------------->
+                  <div class="sidebar-item">
+                    <div class="icon-label-container profile-opacity-heading">
+                      <svg
+                        fill="#ffff"
+                        width="22px"
+                        height="21px"
+                        viewBox="0 0 32 32"
+                        id="icon"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <defs>
+                          <style>
+                            .cls-1 {
+                              fill: none;
+                            }
+                          </style>
+                        </defs>
+                        <title>opacity</title>
+                        <rect x="6" y="6" width="4" height="4"></rect>
+                        <rect x="10" y="10" width="4" height="4"></rect>
+                        <rect x="14" y="6" width="4" height="4"></rect>
+                        <rect x="22" y="6" width="4" height="4"></rect>
+                        <rect x="6" y="14" width="4" height="4"></rect>
+                        <rect x="14" y="14" width="4" height="4"></rect>
+                        <rect x="22" y="14" width="4" height="4"></rect>
+                        <rect x="6" y="22" width="4" height="4"></rect>
+                        <rect x="14" y="22" width="4" height="4"></rect>
+                        <rect x="22" y="22" width="4" height="4"></rect>
+                        <rect x="18" y="10" width="4" height="4"></rect>
+                        <rect x="10" y="18" width="4" height="4"></rect>
+                        <rect x="18" y="18" width="4" height="4"></rect>
+                        <rect
+                          id="_Transparent_Rectangle_"
+                          data-name="<Transparent Rectangle>"
+                          class="cls-1"
+                          width="32"
+                          height="32"
+                        ></rect>
+                      </svg>
+
+                      <label class="slider-label" for="profile-opacity-range"
+                        >Profile Size</label
+                      >
+                    </div>
+
+                    <div class="ranger-container">
+                      <div class="rangeBox">
+                        <div class="range-row">
+                          <input
+                            class="range"
+                            id="range5"
+                            type="range"
+                            value="0"
+                            min="0"
+                            max="100"
+                            name=""
+                          />
+                        </div>
+                        <div id="rangeVal5" class="result">0</div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-------------------type writer new----------------->
+
+                  <div class="sidebar-item">
+                    <div class="icon-label-container effect-heading">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><g fill="none" fill-rule="evenodd"><path d="M24 0v24H0V0zM12.594 23.258l-.012.002l-.071.035l-.02.004l-.014-.004l-.071-.036c-.01-.003-.019 0-.024.006l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.016-.018m.264-.113l-.014.002l-.184.093l-.01.01l-.003.011l.018.43l.005.012l.008.008l.201.092c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022m-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.003-.011l.018-.43l-.003-.012l-.01-.01z"/><path fill="currentColor" d="M11 2a5 5 0 1 0 0 10a5 5 0 0 0 0-10m0 11c-2.395 0-4.575.694-6.178 1.672c-.8.488-1.484 1.064-1.978 1.69C2.358 16.976 2 17.713 2 18.5c0 .845.411 1.511 1.003 1.986c.56.45 1.299.748 2.084.956C6.665 21.859 8.771 22 11 22c.23 0 .46-.002.685-.005a1 1 0 0 0 .89-1.428A5.973 5.973 0 0 1 12 18c0-1.252.383-2.412 1.037-3.373a1 1 0 0 0-.72-1.557c-.43-.046-.87-.07-1.317-.07m7.864.997a1 1 0 0 0-1.728 0l-.91 1.562l-1.766.382a1 1 0 0 0-.534 1.644l1.204 1.348l-.182 1.798a1 1 0 0 0 1.398 1.016l1.654-.73l1.654.73a1 1 0 0 0 1.398-1.016l-.182-1.799l1.204-1.347a1 1 0 0 0-.534-1.644l-1.766-.382z"/></g></svg>
+
+                      <label for="background-effects-select">
+                        <p>Username Effects</p>
+                      </label>
+                    </div>
+                    <input name="" hidden="" id="effect-hidden-input8" />
+                    <div id="dropdown-user-effect" class="nested-dropdown">
+                      <div class="nested-dropdown-header" onclick="toggleNestedMenu(this)">
+                        <span
+                          id="user-input-effect"
+                          class="nested-dropdown-title"
+                          >Choose An Option</span
+                        >
+                        <div class="nested-dropdown-icon">
+                          <svg
+                            class="nested-dropdown-arrow"
+                            width="20px"
+                            height="20px"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M12.7071 14.7071C12.3166 15.0976 11.6834 15.0976 11.2929 14.7071L6.29289 9.70711C5.90237 9.31658 5.90237 8.68342 6.29289 8.29289C6.68342 7.90237 7.31658 7.90237 7.70711 8.29289L12 12.5858L16.2929 8.29289C16.6834 7.90237 17.3166 7.90237 17.7071 8.29289C18.0976 8.68342 18.0976 9.31658 17.7071 9.70711L12.7071 14.7071Z"
+                              fill="#777"
+                            ></path>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="nested-dropdown-list" >
+                        <a
+                          href="#none"
+                          class="nested-dropdown-item"
+                          onclick="selectUsernameEffect('None')"
+                          >None</a
+                        >
+                        <a
+                          href="#ypeWriter"
+                          class="nested-dropdown-item"
+                          onclick="selectUsernameEffect('Type Writer')"
+                          >Type Writer</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <!-------------------Custom Layout----------------->
+                  <div class="sidebar-item font-container">
+                    <div class="icon-label-container font-heading">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16"><path fill="currentColor" fill-rule="evenodd" d="M4 3.5h8A1.5 1.5 0 0 1 13.5 5v.5h-11V5A1.5 1.5 0 0 1 4 3.5m-1.5 7v.5A1.5 1.5 0 0 0 4 12.5h3.25v-2zm0-1.5h4.75V7H2.5zm6.25 1.5V14H4a3 3 0 0 1-3-3V5a3 3 0 0 1 3-3h8a3 3 0 0 1 3 3v2H8.75zm4.591-.91A.75.75 0 0 0 12 8.92l-1.25 2.5a.75.75 0 0 0 .67 1.085h1.287L12 13.92a.75.75 0 0 0 1.341.67l1.25-2.5a.75.75 0 0 0-.67-1.085h-1.287z" clip-rule="evenodd"/></svg>
+                      <label for="background-fonts-select">
+                        <p>Custom Layout</p>
+                      </label>
+                    </div>
+                    <input hidden id="effect-hidden-input7" />
+                    <div id="dropdown-effect7" class="nested-dropdown">
+                      <div class="nested-dropdown-header" onclick="toggleNestedMenu(this)">
+                        <span
+                          id="custom-input-effect"
+                          class="nested-dropdown-title"
+                          >Choose An Option</span
+                        >
+                        <div class="nested-dropdown-icon">
+                          <svg
+                            class="nested-dropdown-arrow"
+                            width="20px"
+                            height="20px"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M12.7071 14.7071C12.3166 15.0976 11.6834 15.0976 11.2929 14.7071L6.29289 9.70711C5.90237 9.31658 5.90237 8.68342 6.29289 8.29289C6.68342 7.90237 7.31658 7.90237 7.70711 8.29289L12 12.5858L16.2929 8.29289C16.6834 7.90237 17.3166 7.90237 17.7071 8.29289C18.0976 8.68342 18.0976 9.31658 17.7071 9.70711L12.7071 14.7071Z"
+                              fill="#777"
+                            ></path>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="nested-dropdown-list" >
+                        <a
+                          href="#Default"
+                          class="nested-dropdown-item"
+                          onclick="selectCustomEffect('Default')"
+                          >Default</a
+                        >
+                        <a
+                          href="#Premium"
+                          class="nested-dropdown-item"
+                          onclick="selectCustomEffect('Premium')"
+                          >Premium</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="toggle-container">
+                    <span class="toggle-label">Nostalgic Glow</span>
+                    <label class="switch">
+                      <input type="checkbox" name="" id="monochrome-toggle" />
+                      <span class="slider round"></span>
+                    </label>
+                  </div>
+                  <div class="toggle-container">
+                    <span class="toggle-label">Colored Icons</span>
+                    <label class="switch">
+                      <input type="checkbox" name="" id="monochrome-toggle" />
+                      <span class="slider round"></span>
+                    </label>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <!-- ! dropdown--end-->
+
+          <div class="add-item">
+            <i class="fas fa-plus"></i>
+            Save
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+   </body>
+  <script src="./work.js"></script>
+</html>
