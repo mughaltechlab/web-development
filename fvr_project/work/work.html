@@ -6,8 +6,8 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
     <!-- todo  -->
-     <link rel="stylesheet" href="../style.css">
-     <link rel="stylesheet" href="./work.css">
+     <link rel="stylesheet" href="./style.css">
+     <link rel="stylesheet" href="./nestedDropdown.css">
     <!-- todo  -->
     <title>test</title>
     <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
@@ -436,9 +436,9 @@
                         </div>
                       </div>
                       <div class="nested-dropdown-list">
-                        <a href="#enable" class="nested-dropdown-item" onclick="dropdownForBadge('None')">None</a>
-                        <a href="#enable" class="nested-dropdown-item" onclick="dropdownForBadge('Enabled')">Enabled</a>
-                        <a href="#Disabled" class="nested-dropdown-item" onclick="dropdownForBadge('Disabled')">Disabled</a>
+                        <a href="#enable" class="nested-dropdown-item" >None</a>
+                        <a href="#enable" class="nested-dropdown-item" >Enabled</a>
+                        <a href="#Disabled" class="nested-dropdown-item" >Disabled</a>
                       </div>
                     </div>
                   </div>
@@ -611,25 +611,21 @@
                         <a
                           href="#none"
                           class="nested-dropdown-item"
-                          onclick="selectBackgroundEffect('None')"
                           >None</a
                         >
                         <a
                           href="#Snowflakes"
                           class="nested-dropdown-item"
-                          onclick="selectBackgroundEffect('Snowflakes')"
                           >Snowflakes</a
                         >
                         <a
                           href="#Bats"
                           class="nested-dropdown-item"
-                          onclick="selectBackgroundEffect('Bats')"
                           >Bats</a
                         >
                         <a
                           href="#TV"
                           class="nested-dropdown-item"
-                          onclick="selectBackgroundEffect('TV')"
                           >TV</a
                         >
                       </div>
@@ -671,19 +667,16 @@
                         <a
                           href="#None"
                           class="nested-dropdown-item"
-                          onclick="dropdownUsernameEffects('None')"
                           >None</a
                         >
                         <a
                           href="#(White) Sparkle"
                           class="nested-dropdown-item"
-                          onclick="dropdownUsernameEffects('(White) Sparkle')"
                           >(White) Sparkle</a
                         >
                         <a
                           href="#(RGB) Colorful"
                           class="nested-dropdown-item"
-                          onclick="dropdownUsernameEffects('(RGB) Colorful')"
                           >(RGB) Colorful</a
                         >
                       </div>
@@ -729,13 +722,11 @@
                         <a
                           href="#Enabled"
                           class="nested-dropdown-item"
-                          onclick="selectGlowEffect('Enabled')"
                           >Enabled</a
                         >
                         <a
                           href="#Disabled"
                           class="nested-dropdown-item"
-                          onclick="selectGlowEffect('Disabled')"
                           >Disabled</a
                         >
                       </div>
@@ -968,13 +959,11 @@
                         <a
                           href="#enabled"
                           class="nested-dropdown-item"
-                          onclick="dropdownDiscordPresence('Enabled')"
                           >Enabled</a
                         >
                         <a
                           href="#disabled"
                           class="nested-dropdown-item"
-                          onclick="dropdownDiscordPresence('Disabled')"
                           >Disabled</a
                         >
                       </div>
@@ -1033,13 +1022,11 @@
                         <a
                           href="#enabled"
                           class="nested-dropdown-item"
-                          onclick="dropdownServerPresence('Enabled')"
                           >Enabled</a
                         >
                         <a
                           href="#disabled"
                           class="nested-dropdown-item"
-                          onclick="dropdownServerPresence('Disabled')"
                           >Disabled</a
                         >
                       </div>
@@ -1093,19 +1080,16 @@
                         <a
                           href="#None"
                           class="nested-dropdown-item"
-                          onclick="selectFontEffect('None')"
                           >None</a
                         >
                         <a
                           href="#Satoshi"
                           class="nested-dropdown-item"
-                          onclick="selectFontEffect('Satoshi')"
                           >Satoshi</a
                         >
                         <a
                           href="#Hacker"
                           class="nested-dropdown-item"
-                          onclick="selectFontEffect('Hacker')"
                           >Hacker</a
                         >
                       </div>
@@ -1149,19 +1133,16 @@
                         <a
                           href="#None"
                           class="nested-dropdown-item"
-                          onclick="selectCursorEffect('None')"
                           >None</a
                         >
                         <a
                           href="#Sparkle"
                           class="nested-dropdown-item"
-                          onclick="selectCursorEffect('Sparkle')"
                           >Sparkle</a
                         >
                         <a
                           href="#Circle"
                           class="nested-dropdown-item"
-                          onclick="selectCursorEffect('Circle')"
                           >Circle</a
                         >
                       </div>
@@ -1385,13 +1366,11 @@
                         <a
                           href="#none"
                           class="nested-dropdown-item"
-                          onclick="selectUsernameEffect('None')"
                           >None</a
                         >
                         <a
                           href="#ypeWriter"
                           class="nested-dropdown-item"
-                          onclick="selectUsernameEffect('Type Writer')"
                           >Type Writer</a
                         >
                       </div>
@@ -1435,13 +1414,11 @@
                         <a
                           href="#Default"
                           class="nested-dropdown-item"
-                          onclick="selectCustomEffect('Default')"
                           >Default</a
                         >
                         <a
                           href="#Premium"
                           class="nested-dropdown-item"
-                          onclick="selectCustomEffect('Premium')"
                           >Premium</a
                         >
                       </div>
@@ -1477,5 +1454,6 @@
 
     
    </body>
-  <script src="./work.js"></script>
+   <script src="./script.js"></script>
+  <script src="./dropdown.js"></script>
 </html>

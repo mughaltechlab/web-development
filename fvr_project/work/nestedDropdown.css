@@ -24,6 +24,9 @@
 .nested-dropdown-arrow{
     transition: transform 0.3s ease-in-out;
 }
+.nested-dropdown-header.active .nested-dropdown-arrow {
+    transform: rotate(180deg);
+}
 .nested-dropdown-list{
     display: none;
     background-color: #0c0c0c;
@@ -42,4 +45,8 @@
     text-decoration: none;
     width: 100%;
     transition: background 0.2s;
+}
+.nested-dropdown-item:hover {
+    background-color: #2b2b2b49;
+    border-radius: 9px;
 }

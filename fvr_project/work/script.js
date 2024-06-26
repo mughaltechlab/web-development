@@ -16,9 +16,15 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+// main dropdown function
+function toggleMenu(header) {
+  header.classList.toggle("active");
+  var content = header.nextElementSibling;
+  content.classList.toggle("active");
+}
+
 
       // ----------------------------------hamburger code
-      document.addEventListener("DOMContentLoaded", function () {
         const hamburgerBtn = document.getElementById("hamburger-btn");
         const crossBtn = document.getElementById("cross-btn");
         const sidebar = document.querySelector(".sidebar");
@@ -37,7 +43,6 @@ document.addEventListener("DOMContentLoaded", function () {
           this.classList.remove("show"); // Hide cross button
           hamburgerBtn.style.display = "block"; // Show hamburger button
         });
-      });
 
       //customize toggle
 
@@ -228,12 +233,10 @@ document.addEventListener("DOMContentLoaded", function () {
       range2.addEventListener("touchmove", () =>
         updateRangeValue(range2, rangeVal2)
       );
-
       function updateRangeValue(rangeElement, displayElement) {
         let result = rangeElement.value;
         displayElement.textContent = result > 0 ? result + "%" : result;
       }
-
       // Initialize the display for the second slider
       updateRangeValue(range2, rangeVal2);
 
@@ -335,352 +338,352 @@ document.addEventListener("DOMContentLoaded", function () {
       // });
 
       // ----------------- Background effect dropdown ------------------
-      const backgroundDropdown = document.getElementById(
-        "dropdown-background-effect"
-      );
-      const backgroundDropdownHeader =
-        backgroundDropdown.querySelector(".dropdown-header");
-      const backgroundDropdownList =
-        backgroundDropdown.querySelector(".dropdown-background-list");
-      const backgroundInputEffect = document.getElementById(
-        "background-input-effect"
-      );
+      // const backgroundDropdown = document.getElementById(
+      //   "dropdown-background-effect"
+      // );
+      // const backgroundDropdownHeader =
+      //   backgroundDropdown.querySelector(".dropdown-header");
+      // const backgroundDropdownList =
+      //   backgroundDropdown.querySelector(".dropdown-background-list");
+      // const backgroundInputEffect = document.getElementById(
+      //   "background-input-effect"
+      // );
 
-      backgroundDropdownHeader.addEventListener("click", () => {
-        backgroundDropdownList.style.display =
-          backgroundDropdown.classList.contains("open") ? "none" : "block";
-        backgroundDropdown.classList.toggle("open");
-      });
+      // backgroundDropdownHeader.addEventListener("click", () => {
+      //   backgroundDropdownList.style.display =
+      //     backgroundDropdown.classList.contains("open") ? "none" : "block";
+      //   backgroundDropdown.classList.toggle("open");
+      // });
 
-      backgroundDropdownList
-        .querySelectorAll(".dropdown-background-item")
-        .forEach((item) => {
-          item.addEventListener("click", (e) => {
-            backgroundInputEffect.textContent = e.target.textContent;
-            backgroundDropdown.classList.remove("open");
-            backgroundDropdownList.style.display = "none";
-          });
-        });
+      // backgroundDropdownList
+      //   .querySelectorAll(".dropdown-background-item")
+      //   .forEach((item) => {
+      //     item.addEventListener("click", (e) => {
+      //       backgroundInputEffect.textContent = e.target.textContent;
+      //       backgroundDropdown.classList.remove("open");
+      //       backgroundDropdownList.style.display = "none";
+      //     });
+      //   });
 
 
       //------------ Username effect dropdown -------------------------
-      const usernameDropdown = document.getElementById("dropdown-username-effect");
-      const usernameDropdownHeader = usernameDropdown.querySelector(".dropdown-header");
-      const usernameDropdownList = usernameDropdown.querySelector(".dropdown-list");
-      const usernameInputEffect = document.getElementById("username-input-effect");
+      // const usernameDropdown = document.getElementById("dropdown-username-effect");
+      // const usernameDropdownHeader = usernameDropdown.querySelector(".dropdown-header");
+      // const usernameDropdownList = usernameDropdown.querySelector(".dropdown-list");
+      // const usernameInputEffect = document.getElementById("username-input-effect");
 
-      usernameDropdownHeader.addEventListener("click", () => {
-        usernameDropdownList.style.display =
-          usernameDropdown.classList.contains("open") ? "none" : "block";
-        usernameDropdown.classList.toggle("open");
-      });
+      // usernameDropdownHeader.addEventListener("click", () => {
+      //   usernameDropdownList.style.display =
+      //     usernameDropdown.classList.contains("open") ? "none" : "block";
+      //   usernameDropdown.classList.toggle("open");
+      // });
 
-      usernameDropdownList
-        .querySelectorAll(".dropdown-item")
-        .forEach((item) => {
-          item.addEventListener("click", (e) => {
-            usernameInputEffect.textContent = e.target.textContent;
-            usernameDropdown.classList.remove("open");
-            usernameDropdownList.style.display = "none";
-          });
-        });
+      // usernameDropdownList
+      //   .querySelectorAll(".dropdown-item")
+      //   .forEach((item) => {
+      //     item.addEventListener("click", (e) => {
+      //       usernameInputEffect.textContent = e.target.textContent;
+      //       usernameDropdown.classList.remove("open");
+      //       usernameDropdownList.style.display = "none";
+      //     });
+      //   });
 
       // Close dropdowns when clicking outside
-      window.addEventListener("click", (e) => {
-        if (!backgroundDropdown.contains(e.target)) {
-          backgroundDropdownList.style.display = "none";
-          backgroundDropdown.classList.remove("open");
-        }
-        if (!usernameDropdown.contains(e.target)) {
-          usernameDropdownList.style.display = "none";
-          usernameDropdown.classList.remove("open");
-        }
-      });
+      // window.addEventListener("click", (e) => {
+      //   if (!backgroundDropdown.contains(e.target)) {
+      //     backgroundDropdownList.style.display = "none";
+      //     backgroundDropdown.classList.remove("open");
+      //   }
+      //   if (!usernameDropdown.contains(e.target)) {
+      //     usernameDropdownList.style.display = "none";
+      //     usernameDropdown.classList.remove("open");
+      //   }
+      // });
       // -------------------------glow effect--------------------------------------//
-      const dropdownHeaderEffect3 = document.querySelector(
-        "#dropdown-effect3 .dropdown-effect-header"
-      );
-      const dropdownEffect3 = document.getElementById("dropdown-effect3");
-      const dropdownArrowEffect3 = dropdownEffect3.querySelector(
-        ".dropdown-effect-arrow"
-      );
-      const dropdownListEffect3 = dropdownEffect3.querySelector(
-        ".dropdown-effect-list"
-      );
-      const inputEffectEnter3 = document.getElementById(
-        "discord-input-effect3"
-      );
+      // const dropdownHeaderEffect3 = document.querySelector(
+      //   "#dropdown-effect3 .dropdown-effect-header"
+      // );
+      // const dropdownEffect3 = document.getElementById("dropdown-effect3");
+      // const dropdownArrowEffect3 = dropdownEffect3.querySelector(
+      //   ".dropdown-effect-arrow"
+      // );
+      // const dropdownListEffect3 = dropdownEffect3.querySelector(
+      //   ".dropdown-effect-list"
+      // );
+      // const inputEffectEnter3 = document.getElementById(
+      //   "discord-input-effect3"
+      // );
 
-      dropdownHeaderEffect3.addEventListener("click", () => {
-        const isOpen = dropdownEffect3.classList.contains("open");
-        dropdownListEffect3.style.display = isOpen ? "none" : "block";
-        dropdownEffect3.classList.toggle("open", !isOpen); // Toggle the "open" class
-      });
+      // dropdownHeaderEffect3.addEventListener("click", () => {
+      //   const isOpen = dropdownEffect3.classList.contains("open");
+      //   dropdownListEffect3.style.display = isOpen ? "none" : "block";
+      //   dropdownEffect3.classList.toggle("open", !isOpen); // Toggle the "open" class
+      // });
 
-      const dropdownItemsEffect3 = dropdownEffect3.querySelectorAll(
-        ".dropdown-effect-item"
-      );
-      dropdownItemsEffect3.forEach((item) => {
-        item.addEventListener("click", (e) => {
-          const selectedValue = e.target.textContent;
-          inputEffectEnter3.textContent = selectedValue;
+      // const dropdownItemsEffect3 = dropdownEffect3.querySelectorAll(
+      //   ".dropdown-effect-item"
+      // );
+      // dropdownItemsEffect3.forEach((item) => {
+      //   item.addEventListener("click", (e) => {
+      //     const selectedValue = e.target.textContent;
+      //     inputEffectEnter3.textContent = selectedValue;
 
-          dropdownEffect3.classList.remove("open"); // Remove the "open" class
-          dropdownListEffect3.style.display = "none";
-        });
-      });
+      //     dropdownEffect3.classList.remove("open"); // Remove the "open" class
+      //     dropdownListEffect3.style.display = "none";
+      //   });
+      // });
 
       // Clicking outside the dropdown will close it
-      window.addEventListener("click", (e) => {
-        if (!dropdownEffect3.contains(e.target)) {
-          dropdownListEffect3.style.display = "none";
-          dropdownEffect3.classList.remove("open"); // Remove the "open" class when clicking outside
-        }
-      });
+      // window.addEventListener("click", (e) => {
+      //   if (!dropdownEffect3.contains(e.target)) {
+      //     dropdownListEffect3.style.display = "none";
+      //     dropdownEffect3.classList.remove("open"); // Remove the "open" class when clicking outside
+      //   }
+      // });
 
       // -------------------------Premium Username--------------------------------------//
-      const dropdownHeaderEffect8 = document.querySelector(
-        "#dropdown-user-effect .dropdown-effect-header"
-      );
-      const dropdownEffect8 = document.getElementById("dropdown-user-effect");
-      const dropdownArrowEffect8 = dropdownEffect8.querySelector(
-        ".dropdown-effect-arrow"
-      );
-      const dropdownListEffect8 = dropdownEffect8.querySelector(
-        ".dropdown-user-effect-list"
-      );
-      const inputEffectEnter8 = document.getElementById(
-        "user-input-effect"
-      );
+      // const dropdownHeaderEffect8 = document.querySelector(
+      //   "#dropdown-user-effect .dropdown-effect-header"
+      // );
+      // const dropdownEffect8 = document.getElementById("dropdown-user-effect");
+      // const dropdownArrowEffect8 = dropdownEffect8.querySelector(
+      //   ".dropdown-effect-arrow"
+      // );
+      // const dropdownListEffect8 = dropdownEffect8.querySelector(
+      //   ".dropdown-user-effect-list"
+      // );
+      // const inputEffectEnter8 = document.getElementById(
+      //   "user-input-effect"
+      // );
 
-      dropdownHeaderEffect8.addEventListener("click", () => {
-        const isOpen = dropdownEffect8.classList.contains("open");
-        dropdownListEffect8.style.display = isOpen ? "none" : "block";
-        dropdownEffect8.classList.toggle("open", !isOpen); // Toggle the "open" class
-      });
+      // dropdownHeaderEffect8.addEventListener("click", () => {
+      //   const isOpen = dropdownEffect8.classList.contains("open");
+      //   dropdownListEffect8.style.display = isOpen ? "none" : "block";
+      //   dropdownEffect8.classList.toggle("open", !isOpen); // Toggle the "open" class
+      // });
 
-      const dropdownItemsEffect8 = dropdownEffect8.querySelectorAll(
-        ".user-effect-item"
-      );
-      dropdownItemsEffect8.forEach((item) => {
-        item.addEventListener("click", (e) => {
-          const selectedValue = e.target.textContent;
-          inputEffectEnter8.textContent = selectedValue;
+      // const dropdownItemsEffect8 = dropdownEffect8.querySelectorAll(
+      //   ".user-effect-item"
+      // );
+      // dropdownItemsEffect8.forEach((item) => {
+      //   item.addEventListener("click", (e) => {
+      //     const selectedValue = e.target.textContent;
+      //     inputEffectEnter8.textContent = selectedValue;
 
-          dropdownEffect8.classList.remove("open"); // Remove the "open" class
-          dropdownListEffect8.style.display = "none";
-        });
-      });
+      //     dropdownEffect8.classList.remove("open"); // Remove the "open" class
+      //     dropdownListEffect8.style.display = "none";
+      //   });
+      // });
 
-      // Clicking outside the dropdown will close it
-      window.addEventListener("click", (e) => {
-        if (!dropdownEffect8.contains(e.target)) {
-          dropdownListEffect8.style.display = "none";
-          dropdownEffect8.classList.remove("open"); // Remove the "open" class when clicking outside
-        }
-      });
+      // // Clicking outside the dropdown will close it
+      // window.addEventListener("click", (e) => {
+      //   if (!dropdownEffect8.contains(e.target)) {
+      //     dropdownListEffect8.style.display = "none";
+      //     dropdownEffect8.classList.remove("open"); // Remove the "open" class when clicking outside
+      //   }
+      // });
       // -------------------------Discord presence--------------------------------------//
-      const dropdownHeaderEffect4 = document.querySelector(
-        "#dropdown-effect4 .dropdown-effect-header"
-      );
-      const dropdownEffect4 = document.getElementById("dropdown-effect4");
-      const dropdownArrowEffect4 = dropdownEffect4.querySelector(
-        ".dropdown-effect-arrow"
-      );
-      const dropdownListEffect4 = dropdownEffect4.querySelector(
-        ".dropdown-effect-list"
-      );
-      const inputEffectEnter4 = document.getElementById(
-        "discord-input-effect4"
-      );
+      // const dropdownHeaderEffect4 = document.querySelector(
+      //   "#dropdown-effect4 .dropdown-effect-header"
+      // );
+      // const dropdownEffect4 = document.getElementById("dropdown-effect4");
+      // const dropdownArrowEffect4 = dropdownEffect4.querySelector(
+      //   ".dropdown-effect-arrow"
+      // );
+      // const dropdownListEffect4 = dropdownEffect4.querySelector(
+      //   ".dropdown-effect-list"
+      // );
+      // const inputEffectEnter4 = document.getElementById(
+      //   "discord-input-effect4"
+      // );
 
-      dropdownHeaderEffect4.addEventListener("click", () => {
-        const isOpen = dropdownEffect4.classList.contains("open");
-        dropdownListEffect4.style.display = isOpen ? "none" : "block";
-        dropdownEffect4.classList.toggle("open", !isOpen);
-      });
+      // dropdownHeaderEffect4.addEventListener("click", () => {
+      //   const isOpen = dropdownEffect4.classList.contains("open");
+      //   dropdownListEffect4.style.display = isOpen ? "none" : "block";
+      //   dropdownEffect4.classList.toggle("open", !isOpen);
+      // });
 
-      const dropdownItemsEffect4 = dropdownEffect4.querySelectorAll(
-        ".dropdown-discord-item"
-      );
-      dropdownItemsEffect4.forEach((item) => {
-        item.addEventListener("click", (e) => {
-          const selectedValue = e.target.textContent;
-          inputEffectEnter4.textContent = selectedValue;
+      // const dropdownItemsEffect4 = dropdownEffect4.querySelectorAll(
+      //   ".dropdown-discord-item"
+      // );
+      // dropdownItemsEffect4.forEach((item) => {
+      //   item.addEventListener("click", (e) => {
+      //     const selectedValue = e.target.textContent;
+      //     inputEffectEnter4.textContent = selectedValue;
 
-          dropdownEffect4.classList.remove("open");
-          dropdownListEffect4.style.display = "none";
-        });
-      });
+      //     dropdownEffect4.classList.remove("open");
+      //     dropdownListEffect4.style.display = "none";
+      //   });
+      // });
 
-      window.addEventListener("click", (e) => {
-        if (!dropdownEffect4.contains(e.target)) {
-          dropdownListEffect4.style.display = "none";
-          dropdownEffect4.classList.remove("open");
-        }
-      });
+      // window.addEventListener("click", (e) => {
+      //   if (!dropdownEffect4.contains(e.target)) {
+      //     dropdownListEffect4.style.display = "none";
+      //     dropdownEffect4.classList.remove("open");
+      //   }
+      // });
 
       // -------------------------server presence--------------------------------------//
-      const dropdownHeaderEffect5 = document.querySelector(
-        "#dropdown-effect5 .dropdown-effect-header"
-      );
-      const dropdownEffect5 = document.getElementById("dropdown-effect5");
-      const dropdownArrowEffect5 = dropdownEffect5.querySelector(
-        ".dropdown-effect-arrow"
-      );
-      const dropdownListEffect5 = dropdownEffect5.querySelector(
-        ".dropdown-effect-list"
-      );
-      const inputEffectEnter5 = document.getElementById(
-        "server-presence-input-effect"
-      );
+      // const dropdownHeaderEffect5 = document.querySelector(
+      //   "#dropdown-effect5 .dropdown-effect-header"
+      // );
+      // const dropdownEffect5 = document.getElementById("dropdown-effect5");
+      // const dropdownArrowEffect5 = dropdownEffect5.querySelector(
+      //   ".dropdown-effect-arrow"
+      // );
+      // const dropdownListEffect5 = dropdownEffect5.querySelector(
+      //   ".dropdown-effect-list"
+      // );
+      // const inputEffectEnter5 = document.getElementById(
+      //   "server-presence-input-effect"
+      // );
 
-      dropdownHeaderEffect5.addEventListener("click", () => {
-        const isOpen = dropdownEffect5.classList.contains("open");
-        dropdownListEffect5.style.display = isOpen ? "none" : "block";
-        dropdownEffect5.classList.toggle("open", !isOpen);
-      });
+      // dropdownHeaderEffect5.addEventListener("click", () => {
+      //   const isOpen = dropdownEffect5.classList.contains("open");
+      //   dropdownListEffect5.style.display = isOpen ? "none" : "block";
+      //   dropdownEffect5.classList.toggle("open", !isOpen);
+      // });
 
-      const dropdownItemsEffect5 = dropdownEffect5.querySelectorAll(
-        ".server-presence-items"
-      );
-      dropdownItemsEffect5.forEach((item) => {
-        item.addEventListener("click", (e) => {
-          const selectedValue = e.target.textContent;
-          inputEffectEnter5.textContent = selectedValue;
+      // const dropdownItemsEffect5 = dropdownEffect5.querySelectorAll(
+      //   ".server-presence-items"
+      // );
+      // dropdownItemsEffect5.forEach((item) => {
+      //   item.addEventListener("click", (e) => {
+      //     const selectedValue = e.target.textContent;
+      //     inputEffectEnter5.textContent = selectedValue;
 
-          dropdownEffect5.classList.remove("open");
-          dropdownListEffect5.style.display = "none";
-        });
-      });
+      //     dropdownEffect5.classList.remove("open");
+      //     dropdownListEffect5.style.display = "none";
+      //   });
+      // });
 
-      window.addEventListener("click", (e) => {
-        if (!dropdownEffect5.contains(e.target)) {
-          dropdownListEffect5.style.display = "none";
-          dropdownEffect5.classList.remove("open");
-        }
-      });
+      // window.addEventListener("click", (e) => {
+      //   if (!dropdownEffect5.contains(e.target)) {
+      //     dropdownListEffect5.style.display = "none";
+      //     dropdownEffect5.classList.remove("open");
+      //   }
+      // });
 
       // -------------------------cursor effect--------------------------------------//
-      const dropdownHeaderEffect6 = document.querySelector(
-        "#dropdown-effect6 .dropdown-effect-header"
-      );
-      const dropdownEffect6 = document.getElementById("dropdown-effect6");
-      const dropdownArrowEffect6 = dropdownEffect6.querySelector(
-        ".dropdown-effect-arrow"
-      );
-      const dropdownListEffect6 = dropdownEffect6.querySelector(
-        ".dropdown-effect-list"
-      );
-      const inputEffectEnter6 = document.getElementById(
-        "discord-input-effect6"
-      );
+      // const dropdownHeaderEffect6 = document.querySelector(
+      //   "#dropdown-effect6 .dropdown-effect-header"
+      // );
+      // const dropdownEffect6 = document.getElementById("dropdown-effect6");
+      // const dropdownArrowEffect6 = dropdownEffect6.querySelector(
+      //   ".dropdown-effect-arrow"
+      // );
+      // const dropdownListEffect6 = dropdownEffect6.querySelector(
+      //   ".dropdown-effect-list"
+      // );
+      // const inputEffectEnter6 = document.getElementById(
+      //   "discord-input-effect6"
+      // );
 
-      dropdownHeaderEffect6.addEventListener("click", () => {
-        const isOpen = dropdownEffect6.classList.contains("open");
-        dropdownListEffect6.style.display = isOpen ? "none" : "block";
-        dropdownEffect6.classList.toggle("open", !isOpen);
-      });
+      // dropdownHeaderEffect6.addEventListener("click", () => {
+      //   const isOpen = dropdownEffect6.classList.contains("open");
+      //   dropdownListEffect6.style.display = isOpen ? "none" : "block";
+      //   dropdownEffect6.classList.toggle("open", !isOpen);
+      // });
 
-      const dropdownItemsEffect6 = dropdownEffect6.querySelectorAll(
-        ".dropdown-effect-item"
-      );
-      dropdownItemsEffect6.forEach((item) => {
-        item.addEventListener("click", (e) => {
-          const selectedValue = e.target.textContent;
-          inputEffectEnter6.textContent = selectedValue;
+      // const dropdownItemsEffect6 = dropdownEffect6.querySelectorAll(
+      //   ".dropdown-effect-item"
+      // );
+      // dropdownItemsEffect6.forEach((item) => {
+      //   item.addEventListener("click", (e) => {
+      //     const selectedValue = e.target.textContent;
+      //     inputEffectEnter6.textContent = selectedValue;
 
-          dropdownEffect6.classList.remove("open");
-          dropdownListEffect6.style.display = "none";
-        });
-      });
+      //     dropdownEffect6.classList.remove("open");
+      //     dropdownListEffect6.style.display = "none";
+      //   });
+      // });
 
-      window.addEventListener("click", (e) => {
-        if (!dropdownEffect6.contains(e.target)) {
-          dropdownListEffect6.style.display = "none";
-          dropdownEffect6.classList.remove("open");
-        }
-      });
+      // window.addEventListener("click", (e) => {
+      //   if (!dropdownEffect6.contains(e.target)) {
+      //     dropdownListEffect6.style.display = "none";
+      //     dropdownEffect6.classList.remove("open");
+      //   }
+      // });
 
       // -------------------------custom layout--------------------------------------//
-      const dropdownHeaderEffect7 = document.querySelector(
-        "#dropdown-effect7 .dropdown-effect-header"
-      );
-      const dropdownEffect7 = document.getElementById("dropdown-effect7");
-      const dropdownArrowEffect7 = dropdownEffect7.querySelector(
-        ".dropdown-effect-arrow"
-      );
-      const dropdownListEffect7 = dropdownEffect7.querySelector(
-        ".dropdown-effect-list"
-      );
-      const inputEffectEnter7 = document.getElementById(
-        "custom-input-effect"
-      );
+      // const dropdownHeaderEffect7 = document.querySelector(
+      //   "#dropdown-effect7 .dropdown-effect-header"
+      // );
+      // const dropdownEffect7 = document.getElementById("dropdown-effect7");
+      // const dropdownArrowEffect7 = dropdownEffect7.querySelector(
+      //   ".dropdown-effect-arrow"
+      // );
+      // const dropdownListEffect7 = dropdownEffect7.querySelector(
+      //   ".dropdown-effect-list"
+      // );
+      // const inputEffectEnter7 = document.getElementById(
+      //   "custom-input-effect"
+      // );
 
-      dropdownHeaderEffect7.addEventListener("click", () => {
-        const isOpen = dropdownEffect7.classList.contains("open");
-        dropdownListEffect7.style.display = isOpen ? "none" : "block";
-        dropdownEffect7.classList.toggle("open", !isOpen);
-      });
+      // dropdownHeaderEffect7.addEventListener("click", () => {
+      //   const isOpen = dropdownEffect7.classList.contains("open");
+      //   dropdownListEffect7.style.display = isOpen ? "none" : "block";
+      //   dropdownEffect7.classList.toggle("open", !isOpen);
+      // });
 
-      const dropdownItemsEffect7 = dropdownEffect7.querySelectorAll(
-        ".custom-effect-item"
-      );
-      dropdownItemsEffect7.forEach((item) => {
-        item.addEventListener("click", (e) => {
-          const selectedValue = e.target.textContent;
-          inputEffectEnter7.textContent = selectedValue;
+      // const dropdownItemsEffect7 = dropdownEffect7.querySelectorAll(
+      //   ".custom-effect-item"
+      // );
+      // dropdownItemsEffect7.forEach((item) => {
+      //   item.addEventListener("click", (e) => {
+      //     const selectedValue = e.target.textContent;
+      //     inputEffectEnter7.textContent = selectedValue;
 
-          dropdownEffect7.classList.remove("open");
-          dropdownListEffect7.style.display = "none";
-        });
-      });
+      //     dropdownEffect7.classList.remove("open");
+      //     dropdownListEffect7.style.display = "none";
+      //   });
+      // });
 
-      window.addEventListener("click", (e) => {
-        if (!dropdownEffect7.contains(e.target)) {
-          dropdownListEffect7.style.display = "none";
-          dropdownEffect7.classList.remove("open");
-        }
-      });
+      // window.addEventListener("click", (e) => {
+      //   if (!dropdownEffect7.contains(e.target)) {
+      //     dropdownListEffect7.style.display = "none";
+      //     dropdownEffect7.classList.remove("open");
+      //   }
+      // });
 
       // -------------------------Badges--------------------------------------//
-      const dropdownHeaderBadge = document.querySelector(
-        ".dropdown-badge-header"
-      );
-      const dropdownBadge = document.querySelector(".dropdown-badge");
-      const dropdownArrowBadge = document.querySelector(
-        ".dropdown-badge-arrow"
-      );
-      const dropdownListBadge = document.querySelector(".dropdown-badge-list");
-      const inputBadgeEnter = document.getElementById("discord-input-badge");
+      // const dropdownHeaderBadge = document.querySelector(
+      //   ".dropdown-badge-header"
+      // );
+      // const dropdownBadge = document.querySelector(".dropdown-badge");
+      // const dropdownArrowBadge = document.querySelector(
+      //   ".dropdown-badge-arrow"
+      // );
+      // const dropdownListBadge = document.querySelector(".dropdown-badge-list");
+      // const inputBadgeEnter = document.getElementById("discord-input-badge");
 
-      dropdownHeaderBadge.addEventListener("click", () => {
-        const isOpen = dropdownBadge.classList.contains("open");
-        dropdownListBadge.style.display = isOpen ? "none" : "block";
-        dropdownBadge.classList.toggle("open", !isOpen);
-        dropdownArrowBadge.classList.toggle("rotate", !isOpen);
-      });
+      // dropdownHeaderBadge.addEventListener("click", () => {
+      //   const isOpen = dropdownBadge.classList.contains("open");
+      //   dropdownListBadge.style.display = isOpen ? "none" : "block";
+      //   dropdownBadge.classList.toggle("open", !isOpen);
+      //   dropdownArrowBadge.classList.toggle("rotate", !isOpen);
+      // });
 
-      const dropdownItemsBadge = document.querySelectorAll(
-        ".dropdown-badge-item"
-      );
-      dropdownItemsBadge.forEach((item) => {
-        item.addEventListener("click", (e) => {
-          const selectedValue = e.target.textContent;
-          inputBadgeEnter.innerHTML = selectedValue;
-          dropdownBadge.classList.remove("open");
-          dropdownArrowBadge.classList.remove("rotate");
-          dropdownListBadge.style.display = "none";
-        });
-      });
+      // const dropdownItemsBadge = document.querySelectorAll(
+      //   ".dropdown-badge-item"
+      // );
+      // dropdownItemsBadge.forEach((item) => {
+      //   item.addEventListener("click", (e) => {
+      //     const selectedValue = e.target.textContent;
+      //     inputBadgeEnter.innerHTML = selectedValue;
+      //     dropdownBadge.classList.remove("open");
+      //     dropdownArrowBadge.classList.remove("rotate");
+      //     dropdownListBadge.style.display = "none";
+      //   });
+      // });
 
-      window.addEventListener("click", (e) => {
-        if (!dropdownBadge.contains(e.target)) {
-          dropdownListBadge.style.display = "none";
-          dropdownBadge.classList.remove("open");
-          dropdownArrowBadge.classList.remove("rotate");
-        }
-      });
+      // window.addEventListener("click", (e) => {
+      //   if (!dropdownBadge.contains(e.target)) {
+      //     dropdownListBadge.style.display = "none";
+      //     dropdownBadge.classList.remove("open");
+      //     dropdownArrowBadge.classList.remove("rotate");
+      //   }
+      // });
 
       // -------------------------color picker--------------------------------------//
       function openEyeDropper() {
@@ -793,42 +796,42 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
       // -------------------------Custom font--------------------------------------//
-      const dropdownHeaderFont = document.querySelector(
-        ".dropdown-font-header"
-      );
+      // const dropdownHeaderFont = document.querySelector(
+      //   ".dropdown-font-header"
+      // );
 
-      const dropdownFont = document.querySelector(".dropdown-font");
-      const dropdownArrowFont = document.querySelector(".dropdown-font-arrow");
-      const dropdownListFont = document.querySelector(".dropdown-font-list");
-      const inputFontEnter = document.getElementById("font-input-effect");
+      // const dropdownFont = document.querySelector(".dropdown-font");
+      // const dropdownArrowFont = document.querySelector(".dropdown-font-arrow");
+      // const dropdownListFont = document.querySelector(".dropdown-font-list");
+      // const inputFontEnter = document.getElementById("font-input-effect");
 
-      dropdownHeaderFont.addEventListener("click", () => {
-        const isOpen = dropdownFont.classList.contains("open");
-        dropdownListFont.style.display = isOpen ? "none" : "block";
-        dropdownFont.classList.toggle("open", !isOpen);
-        dropdownArrowFont.classList.toggle("rotate", !isOpen);
-      });
+      // dropdownHeaderFont.addEventListener("click", () => {
+      //   const isOpen = dropdownFont.classList.contains("open");
+      //   dropdownListFont.style.display = isOpen ? "none" : "block";
+      //   dropdownFont.classList.toggle("open", !isOpen);
+      //   dropdownArrowFont.classList.toggle("rotate", !isOpen);
+      // });
 
-      const dropdownItemsFont = document.querySelectorAll(
-        ".dropdown-font-item"
-      );
-      dropdownItemsFont.forEach((item) => {
-        item.addEventListener("click", (e) => {
-          const selectedValue = e.target.textContent;
-          inputFontEnter.innerHTML = selectedValue;
-          dropdownFont.classList.remove("open");
-          dropdownArrowFont.classList.remove("rotate");
-          dropdownListFont.style.display = "none";
-        });
-      });
+      // const dropdownItemsFont = document.querySelectorAll(
+      //   ".dropdown-font-item"
+      // );
+      // dropdownItemsFont.forEach((item) => {
+      //   item.addEventListener("click", (e) => {
+      //     const selectedValue = e.target.textContent;
+      //     inputFontEnter.innerHTML = selectedValue;
+      //     dropdownFont.classList.remove("open");
+      //     dropdownArrowFont.classList.remove("rotate");
+      //     dropdownListFont.style.display = "none";
+      //   });
+      // });
 
-      window.addEventListener("click", (e) => {
-        if (!dropdownFont.contains(e.target)) {
-          dropdownListFont.style.display = "none";
-          dropdownFont.classList.remove("open");
-          dropdownArrowFont.classList.remove("rotate");
-        }
-      });
+      // window.addEventListener("click", (e) => {
+      //   if (!dropdownFont.contains(e.target)) {
+      //     dropdownListFont.style.display = "none";
+      //     dropdownFont.classList.remove("open");
+      //     dropdownArrowFont.classList.remove("rotate");
+      //   }
+      // });
       //--------------------------------- profile size ranger
       const range5 = document.getElementById("range5");
       const rangeVal5 = document.getElementById("rangeVal5");
